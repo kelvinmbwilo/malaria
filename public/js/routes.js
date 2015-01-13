@@ -1,0 +1,56 @@
+/**
+ * Created by kelvin on 1/9/15.
+ */
+angular.module("malariaApp").config( function($routeProvider){
+    $routeProvider.when("/registration",{
+        templateUrl: 'views/registration.html',
+        controller: 'kayaCtrl'
+    });
+
+    $routeProvider.when("/home",{
+        templateUrl: 'views/home.html',
+        controller: 'malariaAppCtrl'
+    });
+
+    $routeProvider.when("/distribution",{
+        templateUrl: 'views/distribution.html',
+        controller: 'malariaAppCtrl'
+    });
+
+    $routeProvider.when("/stations",{
+        templateUrl: 'views/stations.html',
+        controller: 'malariaAppCtrl'
+    });
+
+//    $routeProvider.when("/change_password",{
+//        templateUrl: 'views/changepass.html',
+//        controller: 'settingsCtrl'
+//    });
+//
+//    $routeProvider.when("/profile",{
+//        templateUrl: 'views/profile.html',
+//        controller: 'settingsCtrl'
+//    });
+//
+//    $routeProvider.when("/group_settings",{
+//        templateUrl: 'views/group_settings.html',
+//        controller: 'settingsCtrl'
+//    });
+//
+//    $routeProvider.when("/meetings",{
+//        templateUrl: 'views/meetings.html',
+//        controller: 'settingsCtrl'
+//    });
+//    $routeProvider.when("/addMember",{
+//        templateUrl: 'views/addMember.html',
+//        controller: 'settingsCtrl'
+//    });
+
+
+    $routeProvider.otherwise({
+        redirectTo: '/home'
+    });
+
+
+
+});

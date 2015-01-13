@@ -14,8 +14,15 @@
 Route::get('/', function()
 {
 	return View::make('home');
-
-
 });
+
+//getting kaya
+Route::get('kaya',array('uses'=>'kayaController@index'));
+
+//getting regions
+Route::get('regions',array('uses'=>'kayaController@getRegions'));
+
+//getting Districts
+Route::get('districts',array('uses'=>'kayaController@getDistricts'));
 
 

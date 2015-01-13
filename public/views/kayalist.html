@@ -1,0 +1,26 @@
+<table class="table table-bordered table-stiped table-hover table-condensed">
+    <thead style="background-color: #5B9BD5">
+    <tr >
+        <th rowspan="2">#</th>
+        <th rowspan="2">Jina La Mkuu wa kaya</th>
+        <th colspan="3">Idadi ya Wanakaya</th>
+        <th rowspan="2">Idadi ya Vyandarua</th>
+    </tr>
+    <tr>
+
+        <th >Me</th>
+        <th >Ke</th>
+        <th >Jumla</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="kaya in data.kaya">
+          <td>{{ kaya.id }}</td>
+          <td>{{ kaya.leader_name }}</td>
+          <td>{{ kaya.male }}</td>
+          <td>{{ kaya.female}}</td>
+          <td>{{ kaya.male + kaya.female }}</td>
+          <td>{{ (kaya.male + kaya.female)/2 }}</td>
+      </tr>
+    </tbody>
+</table>

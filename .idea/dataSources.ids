@@ -1496,6 +1496,7 @@
       <column name="district" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="ward" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="village" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="leader_name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="phone" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="male" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="female" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
