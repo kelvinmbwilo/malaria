@@ -2,7 +2,7 @@
  * Created by kelvin on 1/13/15.
  */
 angular.module("malariaApp")
-    .controller("malariaAppCtrl",function($scope,$http){
+    .controller("malariaAppCtrl",function($scope,$http,$location){
         $scope.data ={};
         //getting all kayas
         $http.get("index.php/kaya").success(function(res){
@@ -19,5 +19,9 @@ angular.module("malariaApp")
             $scope.data.districts = data;
         });
 
+        $scope.isActive = function (viewLocation) {
+            var active = (viewLocation === $location.path());
+            return active;
+        };
 
     })

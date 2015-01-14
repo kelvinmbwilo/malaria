@@ -25,4 +25,13 @@ Route::get('regions',array('uses'=>'kayaController@getRegions'));
 //getting Districts
 Route::get('districts',array('uses'=>'kayaController@getDistricts'));
 
+//adding new kaya
+Route::post('kaya',array('uses'=>'kayaController@store'));
+
+//updating kaya
+Route::post('kaya/{id}',array('uses'=>'kayaController@update'));
+
+//deleting kaya
+Route::post('kaya/delete/{id}',array('uses'=>'kayaController@destroy'));
+
 

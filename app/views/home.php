@@ -5,13 +5,14 @@
     <script src="<?php echo asset('js/angular.js') ?>"></script>
     <script src="<?php echo asset('js/angular-route.js') ?>"></script>
     <script src="<?php echo asset('js/angular-resource.js') ?>"></script>
+    <script src="<?php echo asset('js/angular-animate.js') ?>"></script>
     <script src="<?php echo asset('js/jquery.js') ?>"></script>
     <script src="<?php echo asset('js/bootstrap.js') ?>"></script>
     <link href="<?php echo asset('css/bootstrap.css') ?>" rel="stylesheet" />
     <link href="<?php echo asset('css/bootstrap-theme.css') ?>" rel="stylesheet" />
     <link href="<?php echo asset('font-awesome/css/font-awesome.css') ?>" rel="stylesheet" />
     <script>
-        angular.module("malariaApp",['ngRoute','ngResource']);
+        angular.module("malariaApp",['ngRoute','ngResource','ngAnimate']);
     </script>
     <script src="<?php echo asset('js/routes.js') ?>"></script>
     <script src="<?php echo asset('js/controllers/malariaAppCtrl.js') ?>"></script>
@@ -53,17 +54,17 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#/home"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                    <li ng-class="{ active: isActive('/home') }">
+                        <a href="#home"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li>
-                        <a href="#/registration">Registration</a>
+                    <li ng-class="{ active: isActive('/registration') }">
+                        <a  href="#registration">Registration</a>
                     </li>
-                    <li>
-                        <a href="#/distribution">Distribution</a>
+                    <li ng-class="{ active: isActive('/distribution') }">
+                        <a  href="#distribution">Distribution</a>
                     </li>
-                    <li>
-                        <a href="#/stations">Stations</a>
+                    <li ng-class="{ active: isActive('/stations') }">
+                        <a ng-class="{ active: isActive('/stations') }" href="#stations">Stations</a>
                     </li>
 
                 </ul>

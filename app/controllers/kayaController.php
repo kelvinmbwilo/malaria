@@ -51,7 +51,7 @@ class kayaController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+        return Kaya::create(Input::all());
 	}
 
 
@@ -87,7 +87,8 @@ class kayaController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+        $kaya = Kaya::find($id)->update(Input::all());
+        return $kaya;
 	}
 
 
@@ -99,7 +100,8 @@ class kayaController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$kaya = Kaya::find($id);
+        $kaya->delete();
 	}
 
 
