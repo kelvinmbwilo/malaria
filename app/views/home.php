@@ -2,21 +2,30 @@
 <html ng-app="malariaApp">
 <head>
     <title>Malaria App</title>
+
     <script src="<?php echo asset('js/angular.js') ?>"></script>
     <script src="<?php echo asset('js/angular-route.js') ?>"></script>
     <script src="<?php echo asset('js/angular-resource.js') ?>"></script>
     <script src="<?php echo asset('js/angular-animate.js') ?>"></script>
+    <script src="<?php echo asset('bower_components/angular-aria/angular-aria.min.js') ?>"></script>
+    <script src="<?php echo asset('bower_components/hammerjs/hammer.min.js') ?>"></script>
+    <script src="<?php echo asset('bower_components/angular-material/angular-material.min.js') ?>"></script>
+
     <script src="<?php echo asset('js/jquery.js') ?>"></script>
+
     <script src="<?php echo asset('js/bootstrap.js') ?>"></script>
     <link href="<?php echo asset('css/bootstrap.css') ?>" rel="stylesheet" />
     <link href="<?php echo asset('css/bootstrap-theme.css') ?>" rel="stylesheet" />
     <link href="<?php echo asset('font-awesome/css/font-awesome.css') ?>" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo asset('bower_components/angular-material/angular-material.css') ?>">
+    <link rel="stylesheet" href="<?php echo asset('bower_components/angular-material/angular-material.css') ?>">
     <script>
-        angular.module("malariaApp",['ngRoute','ngResource','ngAnimate']);
+        angular.module("malariaApp",['ngRoute','ngResource','ngAnimate','ngMaterial']);
     </script>
     <script src="<?php echo asset('js/routes.js') ?>"></script>
     <script src="<?php echo asset('js/controllers/malariaAppCtrl.js') ?>"></script>
     <script src="<?php echo asset('js/controllers/kayaCtrl.js') ?>"></script>
+    <script src="<?php echo asset('js/controllers/distributionCtrl.js') ?>"></script>
 </head>
 <body ng-controller="malariaAppCtrl">
 <div class="container">
@@ -36,6 +45,7 @@
 
 
     </header>
+
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -82,6 +92,7 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+
 <section>
     <div ng-view></div>
 </section>
