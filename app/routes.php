@@ -34,4 +34,18 @@ Route::post('kaya/{id}',array('uses'=>'kayaController@update'));
 //deleting kaya
 Route::post('kaya/delete/{id}',array('uses'=>'kayaController@destroy'));
 
+//getting kaya for specific region
+Route::get('kaya/region/{id}',array('uses'=>'kayaController@getregKaya'));
+
+//getting kaya for specific district
+Route::get('kaya/district/{id}',array('uses'=>'kayaController@getdisKaya'));
+
+//getting districts for specific region
+Route::get('districts/region/{id}',array('uses'=>'kayaController@getregDistricts'));
+
+//getting people for specific region
+Route::get('people/region/{id}',array('uses'=>'kayaController@getpeopleInRegion'));
+
+//getting people for specific region
+Route::get('people/district/{id}',array('uses'=>'kayaController@getpeopleInkaya'));
 

@@ -14,7 +14,7 @@ angular.module("malariaApp").config( function($routeProvider){
 
     $routeProvider.when("/distribution",{
         templateUrl: 'views/distribution.html',
-        controller: 'malariaAppCtrl'
+        controller: 'distributionCtrl'
     });
 
     $routeProvider.when("/stations",{

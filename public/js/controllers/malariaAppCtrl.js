@@ -19,6 +19,7 @@ angular.module("malariaApp")
             $scope.data.districts = data;
         });
 
+        //setting active link on top menu
         $scope.isActive = function (viewLocation) {
             var active = (viewLocation === $location.path());
             return active;

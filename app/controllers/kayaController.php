@@ -32,6 +32,71 @@ class kayaController extends \BaseController {
 		return District::all();
 	}
 
+    /**
+	 * Display a listing of Districts for specific region.
+	 *
+	 * @param int $regid
+	 * @return Response
+	 */
+	public function getregDistricts($regid)
+	{
+		return District::where('region_id',$regid)->get();
+	}
+
+    /**
+	 * Display a listing of kaya for specific region.
+	 *
+	 * @param int $regid
+	 * @return Response
+	 */
+	public function getregKaya($regid)
+	{
+		return Kaya::where('region',$regid)->get();
+	}
+
+    /**
+	 * Display a listing of kaya for specific district.
+	 *
+	 * @param int $disid
+	 * @return Response
+	 */
+	public function getdisKaya($disid)
+	{
+		return Kaya::where('district',$disid)->get();
+	}
+
+    /**
+	 * Display a listing of kaya for specific district.
+	 *
+	 * @param int $disid
+	 * @return Response
+	 */
+	public function getpeopleInkaya($disid)
+	{
+        $array = array();
+		$array['male'] =  Kaya::where('district',$disid)->sum('male');
+        $array['female'] =  Kaya::where('district',$disid)->sum('female');
+        $array['total'] = $array['male'] + $array['female'];
+        return json_encode($array);
+	}
+
+/**
+	 * Display a listing of kaya for specific district.
+	 *
+	 * @param int $regid
+	 * @return Response
+	 */
+	public function getpeopleInRegion($regid)
+	{
+        $array = array();
+		$array['male'] =  Kaya::where('region',$regid)->sum('male');
+        $array['female'] =  Kaya::where('region',$regid)->sum('female');
+        $array['total'] = $array['male'] + $array['female'];
+        return json_encode($array);
+	}
+
+
+
 
 	/**
 	 * Show the form for creating a new resource.

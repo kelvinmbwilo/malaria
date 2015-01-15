@@ -89,7 +89,7 @@
     </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="kaya in data.kaya | filter:searchkaya" class="repeated-item">
+      <tr ng-repeat="kaya in data.kaya | filter:searchkaya |orderBy:'-id'" class="repeated-item">
           <td>{{ $index+1 }}</td>
           <td>{{ kaya.uid }}</td>
           <td>{{ kaya.leader_name }}</td>
