@@ -2,7 +2,7 @@
 <html ng-app="malariaApp">
 <head>
     <title>Malaria App</title>
-
+    <script src="<?php echo asset('js/jquery.js') ?>"></script>
     <script src="<?php echo asset('js/angular.js') ?>"></script>
     <script src="<?php echo asset('js/angular-route.js') ?>"></script>
     <script src="<?php echo asset('js/angular-resource.js') ?>"></script>
@@ -11,7 +11,7 @@
     <script src="<?php echo asset('bower_components/hammerjs/hammer.min.js') ?>"></script>
     <script src="<?php echo asset('bower_components/angular-material/angular-material.min.js') ?>"></script>
 
-    <script src="<?php echo asset('js/jquery.js') ?>"></script>
+
 
     <script src="<?php echo asset('js/bootstrap.js') ?>"></script>
     <link href="<?php echo asset('css/bootstrap.css') ?>" rel="stylesheet" />
@@ -26,6 +26,7 @@
     <script src="<?php echo asset('js/controllers/malariaAppCtrl.js') ?>"></script>
     <script src="<?php echo asset('js/controllers/kayaCtrl.js') ?>"></script>
     <script src="<?php echo asset('js/controllers/distributionCtrl.js') ?>"></script>
+    <script src="<?php echo asset('js/controllers/distributeCtrl.js') ?>"></script>
 </head>
 <body ng-controller="malariaAppCtrl">
 <div class="container">
@@ -71,7 +72,10 @@
                         <a  href="#registration">Registration</a>
                     </li>
                     <li ng-class="{ active: isActive('/distribution') }">
-                        <a  href="#distribution">Distribution</a>
+                        <a  href="#distribution">Summary</a>
+                    </li>
+                    <li ng-class="{ active: isActive('/distribute') }">
+                        <a  href="#distribute">Distribute</a>
                     </li>
                     <li ng-class="{ active: isActive('/stations') }">
                         <a ng-class="{ active: isActive('/stations') }" href="#stations">Stations</a>

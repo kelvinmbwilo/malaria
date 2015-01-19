@@ -16,6 +16,10 @@ angular.module("malariaApp").config( function($routeProvider){
         templateUrl: 'views/distribution.html',
         controller: 'distributionCtrl'
     });
+    $routeProvider.when("/distribute",{
+        templateUrl: 'views/distribute.html',
+        controller: 'distributeCtrl'
+    });
 
     $routeProvider.when("/stations",{
         templateUrl: 'views/stations.html',

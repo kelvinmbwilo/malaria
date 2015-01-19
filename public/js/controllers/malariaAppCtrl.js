@@ -25,4 +25,9 @@ angular.module("malariaApp")
             return active;
         };
 
+        $scope.addTwo = function(one,two){
+            return parseInt(one) + parseInt(two);
+        }
+
+
     })

@@ -76,6 +76,9 @@ class kayaController extends \BaseController {
         $array = array();
 		$array['male'] =  Kaya::where('district',$disid)->sum('male');
         $array['female'] =  Kaya::where('district',$disid)->sum('female');
+        $array['kaya'] =  Kaya::where('district',$disid)->count();
+        $array['done'] =  Kaya::where('district',$disid)->where('status',1)->count();
+        $array['not_done'] =  Kaya::where('district',$disid)->where('status',0)->count();
         $array['total'] = $array['male'] + $array['female'];
         return json_encode($array);
 	}
@@ -91,6 +94,9 @@ class kayaController extends \BaseController {
         $array = array();
 		$array['male'] =  Kaya::where('region',$regid)->sum('male');
         $array['female'] =  Kaya::where('region',$regid)->sum('female');
+        $array['kaya'] =  Kaya::where('region',$regid)->count();
+        $array['done'] =  Kaya::where('region',$regid)->where('status',1)->count();
+        $array['not_done'] =  Kaya::where('region',$regid)->where('status',0)->count();
         $array['total'] = $array['male'] + $array['female'];
         return json_encode($array);
 	}
@@ -128,7 +134,7 @@ class kayaController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		return Kaya::find($id);
 	}
 
 
@@ -152,7 +158,34 @@ class kayaController extends \BaseController {
 	 */
 	public function update($id)
 	{
-        $kaya = Kaya::find($id)->update(Input::all());
+        $kaya = Kaya::find($id);
+        $kaya->region = Input::get("region");
+        $kaya->district = Input::get("district");
+        $kaya->ward = Input::get("ward");
+        $kaya->village = Input::get("village");
+        $kaya->leader_name = Input::get("leader_name");
+        $kaya->phone = Input::get("phone");
+        $kaya->male = Input::get("male");
+        $kaya->female = Input::get("female");
+        $kaya->station= Input::get("station");
+        $kaya->name_of_veo = Input::get("name_of_veo");
+        $kaya->writer = Input::get("writer");
+        $kaya->save();
+        return $kaya;
+	}
+
+    /**
+	 * Update the specified resource in storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function updateStatus($id)
+	{
+        $kaya = Kaya::find($id);
+        $kaya->status = 1;
+        $kaya->distribution_date = date("d-m-Y");
+        $kaya->save();
         return $kaya;
 	}
 

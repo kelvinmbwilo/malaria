@@ -31,6 +31,12 @@ Route::post('kaya',array('uses'=>'kayaController@store'));
 //updating kaya
 Route::post('kaya/{id}',array('uses'=>'kayaController@update'));
 
+//updating kaya distribution status
+Route::post('kaya/{id}/distribute',array('uses'=>'kayaController@updateStatus'));
+
+//getting single kaya Information
+Route::get('kaya/{id}',array('uses'=>'kayaController@show'));
+
 //deleting kaya
 Route::post('kaya/delete/{id}',array('uses'=>'kayaController@destroy'));
 
