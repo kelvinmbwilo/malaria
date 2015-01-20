@@ -1,1 +1,32 @@
-<h1>Home Page</h1>
+<div layout="colum" layout-margin layout-align="center center">
+    <md-whiteframe class="md-whiteframe-z5" flex style="height: 100px;background-color: cadetblue">
+        <md-icon icon="bower_components/icons/ic_access_time_48px.svg"></md-icon>
+    </md-whiteframe>
+    <md-whiteframe class="md-whiteframe-z5" flex style="height: 100px;background-color: cadetblue">
+        <md-icon icon="bower_components/icons/ic_account_balance_48px.svg"></md-icon>
+    </md-whiteframe>
+    <md-whiteframe class="md-whiteframe-z5" flex style="height: 100px;background-color: cadetblue">
+        <md-icon icon="bower_components/icons/ic_comment_48px.svg"></md-icon>
+    </md-whiteframe>
+    <md-whiteframe class="md-whiteframe-z5" flex style="height: 100px;background-color: cadetblue">
+        <md-icon icon="bower_components/icons/ic_people_48px.svg"></md-icon>
+    </md-whiteframe>
+
+</div>
+<div layout="column" layout-margin >
+<md-whiteframe class="md-whiteframe-z5" layout layout-align="center center">
+<md-tabs md-selected="selectedIndex">
+    <md-tab ng-repeat="region in data.regions" ng-disabled="tab.disabled" label="{{region.region}}">
+        <div class="demo-tab tab{{$index%4}}" layout="column" layout-fill layout-align="space-around center">
+            <div><h2>{{ region.region }} Region Net Distribution Summary</h2></div>
+            <md-button class="md-warn" ng-click="removeTab( tab )">
+                Remove Tab
+                <md-tooltip>
+                    Click to remove this
+                </md-tooltip>
+            </md-button>
+        </div>
+    </md-tab>
+</md-tabs>
+    </md-whiteframe>
+    </div>

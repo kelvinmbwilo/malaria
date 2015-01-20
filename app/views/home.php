@@ -85,7 +85,7 @@
 <!--                        <a  href="#distribute">Distribute</a>-->
                     </li>
                     <li ng-class="{ active: isActive('/stations') }">
-                        <md-button href="#stations">Stations</md-button>
+                        <md-button href="#stations">Administrative Units</md-button>
 <!--                        <a  href="#stations">Stations</a>-->
                     </li>
 
