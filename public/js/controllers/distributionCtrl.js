@@ -17,9 +17,12 @@ angular.module("malariaApp")
 ////                    });
 ////                });
 ////            });
-            $http.get("index.php/people/region/"+value.id).success(function(ppl){
-                region.people = ppl;
-            });
+            if(!region.people){
+                $http.get("index.php/people/region/"+value.id).success(function(ppl){
+                    region.people = ppl;
+                });
+            }
+
         })
         $scope.showDistrictDetails = function(region){
             $scope.districtVisible=[];
