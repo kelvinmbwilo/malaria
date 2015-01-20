@@ -90,3 +90,29 @@ Route::get('warddetails/{id}',array('uses'=>'kayaController@WardDetails'));
 //getting village details ---taking ward ID----
 Route::get('villagedetails/{id}',array('uses'=>'kayaController@VillageDetails'));
 
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////updating adminstative units////////////////////
+////////////////////////////////////////////////////////////////////////
+//eddit region
+Route::post('edit/region/{id}',array('uses'=>'kayaController@updateRegion'));
+
+//eddit district
+Route::post('edit/district/{id}',array('uses'=>'kayaController@updateDistrict'));
+
+//eddit ward
+Route::post('edit/ward/{id}',array('uses'=>'kayaController@updateWard'));
+
+//eddit village
+Route::post('edit/village/{id}',array('uses'=>'kayaController@updateVillage'));
+
+//Deleting region
+Route::post('delete/region/{id}',array('uses'=>'kayaController@destroyRegion'));
+
+//Deleting district
+Route::post('delete/district/{id}',array('uses'=>'kayaController@destroyDistrict'));
+
+//Deleting ward
+Route::post('delete/ward/{id}',array('uses'=>'kayaController@destroyWard'));
+
+//Deleting village
+Route::post('delete/village/{id}',array('uses'=>'kayaController@destroyVillage'));

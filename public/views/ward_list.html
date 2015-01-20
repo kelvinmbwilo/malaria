@@ -9,8 +9,8 @@
                 <h4>{{ward.village }} Villages {{ward.households }} Households </h4>
             </div>
             <div class="md-tile-right">
-                <md-button title="Edit {{ward.ward}} " class="md-fab md-raised" style="width: 30px;height: 30px"><i class="fa fa-pencil"></i> </md-button>
-                <md-button title="Delete {{ward.ward}}" class="md-fab md-raised md-warn" style="width: 30px;height: 30px"><i class="fa fa-trash-o"></i> </md-button>
+                <md-button ng-click="editOrgUnit(ward.id,'ward')" title="Edit {{ward.ward}} " class="md-fab md-raised" style="width: 30px;height: 30px"><i class="fa fa-pencil"></i> </md-button>
+                <md-button ng-click="deleteOrgUnit(ward.id,'ward')" title="Delete {{ward.ward}}" class="md-fab md-raised md-warn" style="width: 30px;height: 30px"><i class="fa fa-trash-o"></i> </md-button>
             </div>
         </md-item-content>
     </md-item>

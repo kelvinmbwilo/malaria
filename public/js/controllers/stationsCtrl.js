@@ -2,7 +2,7 @@
  * Created by kelvin on 1/19/15.
  */
 angular.module("malariaApp")
-    .controller('stationsCtrl',function($scope,$http){
+    .controller('stationsCtrl',function($scope,$http,$mdDialog){
         var  tree;
         $scope.getRegionChildren = function(id){
             var child = [];
@@ -175,4 +175,88 @@ angular.module("malariaApp")
 
         };
 
+        $scope.showEdit = function(ev,id,type) {
+            $mdDialog.show({
+                controller: DialogController,
+                templateUrl: 'views/editOrgunit.html',
+                targetEvent: ev
+            })
+                .then(function(answer) {
+                    $scope.alert = 'You said the information was "' + answer + '".';
+                }, function() {
+                    $scope.alert = 'You cancelled the dialog.';
+                });
+        };
+
+//        edditing org units
+        $scope.editOrgUnit = function(id,type,val){
+            if(type == 'region'){
+                $http.post("index.php/edit/"+type+"/"+id, {val:val}).success(function (newVal) {
+
+                });
+            }if(type == 'district'){
+                $http.post("index.php/edit/"+type+"/"+id, {val:val}).success(function (newVal) {
+
+                });
+            }if(type == 'ward'){
+                $http.post("index.php/edit/"+type+"/"+id, {val:val}).success(function (newVal) {
+
+                });
+            }if(type == 'village'){
+                $http.post("index.php/edit/"+type+"/"+id, {val:val}).success(function (newVal) {
+
+                });
+            }
+        }
+
+        //        edditing org units
+        $scope.deleteOrgUnit = function(id,type){
+            if(type == 'region'){
+                $http.post("index.php/delete/"+type+"/"+id).success(function (newVal) {
+
+                });
+            }if(type == 'district'){
+                $http.post("index.php/delete/"+type+"/"+id).success(function (newVal) {
+
+                });
+            }if(type == 'ward'){
+                $http.post("index.php/delete/"+type+"/"+id).success(function (newVal) {
+
+                });
+            }if(type == 'village'){
+                $http.post("index.php/delete/"+type+"/"+id).success(function (newVal) {
+
+                });
+            }
+        }
+        $scope.deletedOrgunit = [];
+        $scope.deletedRegion = [];
+        $scope.showConfirm = function(ev,id,type) {
+            var confirm = $mdDialog.confirm()
+                .title('Are you sure you want to delete this ' + type)
+                .content('All child of the administrative unit will also be deleted and this action is irreversible')
+                .ariaLabel('Lucky day')
+                .ok('Delete')
+                .cancel('Cancel')
+                .targetEvent(ev);
+            $mdDialog.show(confirm).then(function() {
+                  //$scope.deleteOrgUnit(id,type);
+                  $scope.deletedRegion[id] = true;
+            }, function() {
+
+            });
+        };
+
     });
+
+function DialogController($scope, $mdDialog) {
+    $scope.hide = function() {
+        $mdDialog.hide();
+    };
+    $scope.cancel = function() {
+        $mdDialog.cancel();
+    };
+    $scope.answer = function(answer) {
+        $mdDialog.hide(answer);
+    };
+}

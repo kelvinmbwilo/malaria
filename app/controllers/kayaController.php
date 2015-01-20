@@ -316,6 +316,7 @@ class kayaController extends \BaseController {
         $i=0;
         foreach(District::where('region_id',$id)->get() as $district){
             $villagecount = 0;
+            $arr[$i]['id'] = $district->id;
             $arr[$i]['district'] = $district->district;
             $arr[$i]['ward'] = $district->ward()->count();
             foreach(Ward::where('district_id',$district->id)->get() as $ward){
@@ -339,6 +340,7 @@ class kayaController extends \BaseController {
         $arr = array();
         $i=0;
         foreach(Ward::where('district_id',$id)->get() as $ward){
+            $arr[$i]['id'] = $ward->id;
             $arr[$i]['ward'] = $ward->name;
             $arr[$i]['village'] = $ward->village()->count();
             $arr[$i]['households'] = Kaya::where('ward',$ward->id)->count();
@@ -358,6 +360,7 @@ class kayaController extends \BaseController {
         $arr = array();
         $i=0;
         foreach(Village::where('ward_id',$id)->get() as $village){
+            $arr[$i]['id'] = $village->id;
             $arr[$i]['village'] = $village->name;
             $arr[$i]['households'] = Kaya::where('village',$village->id)->count();
             $i++;
@@ -377,6 +380,65 @@ class kayaController extends \BaseController {
 	}
 
 
+    /////////////////////////////////////////////////////////////////
+    ///////////editing resources ///////////////////////////////////
+    ////////////////////////////////////////////////////////////////
+
+    /**
+     * edit region details.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function updateRegion($id)
+    {
+        $region = Region::find($id);
+        $region->region = Input::get('val');
+        $region->save();
+        return $region->region;
+    }
+
+    /**
+     * edit region details.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function updateDistrict($id)
+    {
+        $district = Region::find($id);
+        $district->district = Input::get('val');
+        $district->save();
+        return $district->district;
+    }
+
+    /**
+     * edit region details.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function updateWard($id)
+    {
+        $ward = Region::find($id);
+        $ward->name = Input::get('val');
+        $ward->save();
+        return $ward->name;
+    }
+
+    /**
+     * edit region details.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function updateVillage($id)
+    {
+        $village = Village::find($id);
+        $village->name = Input::get('val');
+        $village->save();
+        return $village->name;
+    }
 
 
 
