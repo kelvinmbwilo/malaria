@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a28b07d-a7c3-4385-bd7c-e23681f90765" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/district_list.html" afterPath="$PROJECT_DIR$/public/views/district_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/kayaController.php" afterPath="$PROJECT_DIR$/app/controllers/kayaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/kayaCtrl.js" afterPath="$PROJECT_DIR$/public/js/controllers/kayaCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/region_list.html" afterPath="$PROJECT_DIR$/public/views/region_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/stations.html" afterPath="$PROJECT_DIR$/public/views/stations.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/stationsCtrl.js" afterPath="$PROJECT_DIR$/public/js/controllers/stationsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/village_list.html" afterPath="$PROJECT_DIR$/public/views/village_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/ward_list.html" afterPath="$PROJECT_DIR$/public/views/ward_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="malaria.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,28 +25,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="stationsCtrl.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="stationsCtrl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/controllers/stationsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="40" selection-start="6785" selection-end="6794" vertical-scroll-proportion="-14.535714" vertical-offset="1069" max-vertical-offset="3276">
+            <state line="193" column="27" selection-start="8109" selection-end="8109" vertical-scroll-proportion="0.89670014" vertical-offset="1427" max-vertical-offset="3312">
               <folding>
                 <element signature="e#237#2754#0" expanded="false" />
                 <element signature="e#2838#3083#0" expanded="false" />
                 <element signature="e#3330#3780#0" expanded="false" />
                 <element signature="e#3880#4221#0" expanded="false" />
                 <element signature="e#5126#5254#0" expanded="false" />
-                <element signature="e#9545#12213#0" expanded="false" />
-                <element signature="e#12441#13251#0" expanded="false" />
-                <element signature="e#13339#13871#0" expanded="false" />
+                <element signature="e#9547#12215#0" expanded="false" />
+                <element signature="e#12443#13253#0" expanded="false" />
+                <element signature="e#13341#13873#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stations.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="stations.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/views/stations.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="89" selection-start="718" selection-end="718" vertical-scroll-proportion="0.24242425" vertical-offset="0" max-vertical-offset="612">
+            <state line="17" column="50" selection-start="1173" selection-end="1173" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="612">
               <folding>
                 <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#md-whiteframe#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#md-whiteframe#0;n#!!top" expanded="true" />
@@ -175,8 +167,8 @@
         <option value="$PROJECT_DIR$/public/views/ward_list.html" />
         <option value="$PROJECT_DIR$/public/views/district_list.html" />
         <option value="$PROJECT_DIR$/app/controllers/kayaController.php" />
-        <option value="$PROJECT_DIR$/public/js/controllers/stationsCtrl.js" />
         <option value="$PROJECT_DIR$/public/views/stations.html" />
+        <option value="$PROJECT_DIR$/public/js/controllers/stationsCtrl.js" />
       </list>
     </option>
   </component>
@@ -431,7 +423,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12084994" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7729084" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -758,28 +750,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/stations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="50" selection-start="1173" selection-end="1173" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="612">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#md-whiteframe#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#md-whiteframe#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controllers/stationsCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="40" selection-start="6785" selection-end="6794" vertical-scroll-proportion="-14.535714" vertical-offset="1069" max-vertical-offset="3276">
+        <state line="193" column="27" selection-start="8109" selection-end="8109" vertical-scroll-proportion="0.89670014" vertical-offset="1427" max-vertical-offset="3312">
           <folding>
             <element signature="e#237#2754#0" expanded="false" />
             <element signature="e#2838#3083#0" expanded="false" />
             <element signature="e#3330#3780#0" expanded="false" />
             <element signature="e#3880#4221#0" expanded="false" />
             <element signature="e#5126#5254#0" expanded="false" />
-            <element signature="e#9545#12213#0" expanded="false" />
-            <element signature="e#12441#13251#0" expanded="false" />
-            <element signature="e#13339#13871#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/stations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="89" selection-start="718" selection-end="718" vertical-scroll-proportion="0.24242425" vertical-offset="0" max-vertical-offset="612">
-          <folding>
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#md-whiteframe#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#md-whiteframe#0;n#!!top" expanded="true" />
+            <element signature="e#9547#12215#0" expanded="false" />
+            <element signature="e#12443#13253#0" expanded="false" />
+            <element signature="e#13341#13873#0" expanded="false" />
           </folding>
         </state>
       </provider>

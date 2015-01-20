@@ -134,6 +134,7 @@ angular.module("malariaApp")
             switch (b.level){
                 case 1:
                     $http.post("index.php/region", {val:val}).success(function (newKaya) {
+                        $scope.addingOrg = false;
                         $scope.data.regions.push({
                             region: newKaya.region,
                             id:newKaya.id
@@ -144,11 +145,12 @@ angular.module("malariaApp")
                             id :newKaya.id,
                             children:$scope.getRegionChildren(newKaya.id)
                         });
-                        $scope.addingOrg = false;
+
                     })
                     break;
                 case 2:
                     $http.post("index.php/adddistrict/"+b.id, {val:val}).success(function (newKaya) {
+                        $scope.addingOrg = false;
                         $scope.data.distictss.push({
                             district: newKaya.district,
                             id:newKaya.id
@@ -159,11 +161,12 @@ angular.module("malariaApp")
                             id:newKaya.id,
                             children:[]
                         });
-                        $scope.addingOrg = false;
+
                     })
                     break;
                 case 3:
                     $http.post("index.php/addward/"+b.id, {val:val}).success(function (newKaya) {
+                        $scope.addingOrg = false;
                         $scope.data.wardss.push({
                             ward: newKaya.name,
                             id:newKaya.id
@@ -174,11 +177,11 @@ angular.module("malariaApp")
                             id:newKaya.id,
                             children:[]
                         });
-                        $scope.addingOrg = false;
                     })
                     break;
                 case 4:
                     $http.post("index.php/addvillage/"+ b.id, {val:val}).success(function (newKaya) {
+                        $scope.addingOrg = false;
                         $scope.data.villagess.push({
                             village: newKaya.name,
                             id:newKaya.id
@@ -189,7 +192,6 @@ angular.module("malariaApp")
                             id:newKaya.id,
                             children:[]
                         });
-                        $scope.addingOrg = false;
                     })
                     break;
                 default:
