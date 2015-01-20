@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a28b07d-a7c3-4385-bd7c-e23681f90765" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/stationsCtrl.js" afterPath="$PROJECT_DIR$/public/js/controllers/stationsCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/distribution.html" afterPath="$PROJECT_DIR$/public/views/distribution.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/distributionCtrl.js" afterPath="$PROJECT_DIR$/public/js/controllers/distributionCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/kayaController.php" afterPath="$PROJECT_DIR$/app/controllers/kayaController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/registration.html" afterPath="$PROJECT_DIR$/public/views/registration.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
     </list>
     <ignored path="malaria.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,77 +29,138 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="stationsCtrl.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/stationsCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="193" column="27" selection-start="8109" selection-end="8109" vertical-scroll-proportion="0.89670014" vertical-offset="1427" max-vertical-offset="3312">
-              <folding>
-                <element signature="e#237#2754#0" expanded="false" />
-                <element signature="e#2838#3083#0" expanded="false" />
-                <element signature="e#3330#3780#0" expanded="false" />
-                <element signature="e#3880#4221#0" expanded="false" />
-                <element signature="e#5126#5254#0" expanded="false" />
-                <element signature="e#9547#12215#0" expanded="false" />
-                <element signature="e#12443#13253#0" expanded="false" />
-                <element signature="e#13341#13873#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stations.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views/stations.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="50" selection-start="1173" selection-end="1173" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="612">
-              <folding>
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#md-whiteframe#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#md-whiteframe#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="district_list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views/district_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="85" selection-start="115" selection-end="115" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="450">
-              <folding>
-                <element signature="n#style#0;n#md-button#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#1;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ward_list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views/ward_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="70" selection-start="96" selection-end="96" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="450">
-              <folding>
-                <element signature="n#style#0;n#md-button#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#1;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="region_list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views/region_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="86" selection-start="83" selection-end="117" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="450">
-              <folding>
-                <element signature="n#style#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#1;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="kayaController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/kayaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="287" column="22" selection-start="5856" selection-end="5856" vertical-scroll-proportion="-5.148148" vertical-offset="5027" max-vertical-offset="8910">
+            <state line="149" column="38" selection-start="3604" selection-end="3622" vertical-scroll-proportion="-17.88889" vertical-offset="885" max-vertical-offset="3258">
+              <folding>
+                <element signature="e#56#128#0" expanded="false" />
+                <element signature="n#index#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#187#254#0" expanded="false" />
+                <element signature="n#getRegions#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#320#389#0" expanded="false" />
+                <element signature="n#getDistricts#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#459#570#0" expanded="false" />
+                <element signature="n#getregDistricts#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#676#785#0" expanded="false" />
+                <element signature="e#890#999#0" expanded="false" />
+                <element signature="n#getVillageWard#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#1103#1209#0" expanded="false" />
+                <element signature="n#getregKaya#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#1303#1411#0" expanded="false" />
+                <element signature="n#getdisKaya#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#1507#1615#0" expanded="false" />
+                <element signature="n#getpeopleInkaya#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#4143#4223#0" expanded="false" />
+                <element signature="n#create#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#4264#4344#0" expanded="false" />
+                <element signature="n#store#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#4424#4529#0" expanded="false" />
+                <element signature="n#storeDistrict#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#4587#4700#0" expanded="false" />
+                <element signature="e#4604#4699#1" expanded="false" />
+                <element signature="e#4710#4788#0" expanded="false" />
+                <element signature="n#storeRegion#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#4838#4912#0" expanded="false" />
+                <element signature="e#4853#4911#1" expanded="false" />
+                <element signature="e#4922#5023#0" expanded="false" />
+                <element signature="n#storeWard#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#5077#5184#0" expanded="false" />
+                <element signature="e#5090#5183#1" expanded="false" />
+                <element signature="e#5194#5299#0" expanded="false" />
+                <element signature="n#storeVillage#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#5357#5464#0" expanded="false" />
+                <element signature="e#5373#5463#1" expanded="false" />
+                <element signature="e#5472#5562#0" expanded="false" />
+                <element signature="n#show#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#5625#5733#0" expanded="false" />
+                <element signature="n#edit#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#5775#5875#0" expanded="false" />
+                <element signature="n#update#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#6517#6617#0" expanded="false" />
+                <element signature="n#updateStatus#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#6817#6919#0" expanded="false" />
+                <element signature="n#destroy#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#7012#7114#0" expanded="false" />
+                <element signature="n#destroyRegion#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#7215#7317#0" expanded="false" />
+                <element signature="n#destroyDistrict#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#7422#7524#0" expanded="false" />
+                <element signature="n#destroyWard#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#7617#7719#0" expanded="false" />
+                <element signature="n#destroyVillage#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#7823#7915#0" expanded="false" />
+                <element signature="n#RegionDetails#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#8127#8405#0" expanded="false" />
+                <element signature="e#8255#8395#0" expanded="false" />
+                <element signature="e#8590#8685#0" expanded="false" />
+                <element signature="n#DistrictDetails#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#8804#9371#0" expanded="false" />
+                <element signature="e#9069#9209#0" expanded="false" />
+                <element signature="e#9414#9504#0" expanded="false" />
+                <element signature="n#WardDetails#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#9588#9894#0" expanded="false" />
+                <element signature="e#9937#10031#0" expanded="false" />
+                <element signature="n#VillageDetails#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#10118#10380#0" expanded="false" />
+                <element signature="e#10423#10515#0" expanded="false" />
+                <element signature="n#DistributionList#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#10826#10920#0" expanded="false" />
+                <element signature="n#updateRegion#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#11107#11201#0" expanded="false" />
+                <element signature="n#updateDistrict#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#11464#11558#0" expanded="false" />
+                <element signature="n#updateWard#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#11781#11875#0" expanded="false" />
+                <element signature="n#updateVillage#0;n#kayaController#0;n#!!top" expanded="false" />
+                <element signature="e#12119#12221#0" expanded="false" />
+                <element signature="n#districtWardList#0;n#kayaController#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registration.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/registration.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="84" selection-start="337" selection-end="413" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="1710">
+              <folding>
+                <element signature="tag#div#0;tag#div#0;tag#md-whiteframe#0;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#1;n#div#1;n#div#0;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#div#2;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#div#2;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#3;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="distribution.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/distribution.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="104" column="63" selection-start="6847" selection-end="6847" vertical-scroll-proportion="-12.074074" vertical-offset="1546" max-vertical-offset="2664">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="distributionCtrl.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/controllers/distributionCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="39" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.64600325" vertical-offset="486" max-vertical-offset="1764">
               <folding />
             </state>
           </provider>
@@ -104,20 +169,8 @@
       <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="77" selection-start="3536" selection-end="3536" vertical-scroll-proportion="-5.814815" vertical-offset="1463" max-vertical-offset="2070">
+            <state line="64" column="23" selection-start="2064" selection-end="2075" vertical-scroll-proportion="-3.4" vertical-offset="803" max-vertical-offset="2178">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="village_list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views/village_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="74" selection-start="89" selection-end="103" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="450">
-              <folding>
-                <element signature="n#style#0;n#md-button#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#1;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -148,8 +201,6 @@
         <option value="$PROJECT_DIR$/public/views/kayalist.html" />
         <option value="$PROJECT_DIR$/public/views/one_voucher.html" />
         <option value="$PROJECT_DIR$/public/js/controllers/distributeCtrl.js" />
-        <option value="$PROJECT_DIR$/public/views/distribution.html" />
-        <option value="$PROJECT_DIR$/public/views/registration.html" />
         <option value="$PROJECT_DIR$/public/js/routes.js" />
         <option value="$PROJECT_DIR$/app/models/Region.php" />
         <option value="$PROJECT_DIR$/app/models/District.php" />
@@ -158,17 +209,19 @@
         <option value="$PROJECT_DIR$/public/js/controllers/malariaAppCtrl.js" />
         <option value="$PROJECT_DIR$/app/views/home.php" />
         <option value="$PROJECT_DIR$/public/views/distribute.html" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/public/views/editOrgunit.html" />
-        <option value="$PROJECT_DIR$/public/js/controllers/distributionCtrl.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/kayaCtrl.js" />
         <option value="$PROJECT_DIR$/public/views/region_list.html" />
         <option value="$PROJECT_DIR$/public/views/village_list.html" />
         <option value="$PROJECT_DIR$/public/views/ward_list.html" />
         <option value="$PROJECT_DIR$/public/views/district_list.html" />
-        <option value="$PROJECT_DIR$/app/controllers/kayaController.php" />
         <option value="$PROJECT_DIR$/public/views/stations.html" />
         <option value="$PROJECT_DIR$/public/js/controllers/stationsCtrl.js" />
+        <option value="$PROJECT_DIR$/public/views/registration.html" />
+        <option value="$PROJECT_DIR$/app/controllers/kayaController.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/public/views/distribution.html" />
+        <option value="$PROJECT_DIR$/public/js/controllers/distributionCtrl.js" />
       </list>
     </option>
   </component>
@@ -419,11 +472,11 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14826702" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.016046213" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17650834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7729084" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14873838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -588,19 +641,9 @@
         <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="673" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/distribution.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="59" selection-start="799" selection-end="799" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1188" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controllers/distributeCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="53" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="48" selection-start="941" selection-end="941" vertical-scroll-proportion="-10.666667" vertical-offset="162" max-vertical-offset="2520" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/routes.js">
@@ -660,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/distributionCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="936">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="34" selection-start="4065" selection-end="4074" vertical-scroll-proportion="-31.333334" vertical-offset="432" max-vertical-offset="2142">
@@ -677,13 +713,6 @@
     <entry file="file://$PROJECT_DIR$/public/views/editOrgunit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="211" selection-start="206" selection-end="289" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="198">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="77" selection-start="3536" selection-end="3536" vertical-scroll-proportion="-5.814815" vertical-offset="1463" max-vertical-offset="2070">
           <folding />
         </state>
       </provider>
@@ -702,44 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/ward_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="70" selection-start="96" selection-end="96" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="450">
-          <folding>
-            <element signature="n#style#0;n#md-button#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#1;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/region_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="86" selection-start="83" selection-end="117" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="450">
-          <folding>
-            <element signature="n#style#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#1;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/kayaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="287" column="22" selection-start="5856" selection-end="5856" vertical-scroll-proportion="-5.148148" vertical-offset="5027" max-vertical-offset="8910">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/district_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="85" selection-start="115" selection-end="115" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="450">
-          <folding>
-            <element signature="n#style#0;n#md-button#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#1;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/views/village_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="74" selection-start="89" selection-end="103" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="450">
@@ -750,19 +741,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/stations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="50" selection-start="1173" selection-end="1173" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="612">
-          <folding>
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#md-whiteframe#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#md-whiteframe#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controllers/stationsCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="27" selection-start="8109" selection-end="8109" vertical-scroll-proportion="0.89670014" vertical-offset="1427" max-vertical-offset="3312">
+        <state line="193" column="27" selection-start="8109" selection-end="8109" vertical-scroll-proportion="1.059322" vertical-offset="1427" max-vertical-offset="3312">
           <folding>
             <element signature="e#237#2754#0" expanded="false" />
             <element signature="e#2838#3083#0" expanded="false" />
@@ -773,6 +754,183 @@
             <element signature="e#12443#13253#0" expanded="false" />
             <element signature="e#13341#13873#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/stations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="50" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.5294118" vertical-offset="0" max-vertical-offset="612">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#md-whiteframe#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#md-whiteframe#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/district_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="85" selection-start="115" selection-end="115" vertical-scroll-proportion="0.062283736" vertical-offset="0" max-vertical-offset="578">
+          <folding>
+            <element signature="n#style#0;n#md-button#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-button#1;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/ward_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="70" selection-start="96" selection-end="96" vertical-scroll-proportion="0.062283736" vertical-offset="0" max-vertical-offset="578">
+          <folding>
+            <element signature="n#style#0;n#md-button#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-button#1;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/region_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="86" selection-start="83" selection-end="117" vertical-scroll-proportion="0.062283736" vertical-offset="0" max-vertical-offset="578">
+          <folding>
+            <element signature="n#style#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-button#0;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-button#1;n#div#2;n#md-item-content#0;n#md-item#0;n#md-list#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/kayaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="38" selection-start="3604" selection-end="3622" vertical-scroll-proportion="-17.88889" vertical-offset="885" max-vertical-offset="3258">
+          <folding>
+            <element signature="e#56#128#0" expanded="false" />
+            <element signature="n#index#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#187#254#0" expanded="false" />
+            <element signature="n#getRegions#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#320#389#0" expanded="false" />
+            <element signature="n#getDistricts#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#459#570#0" expanded="false" />
+            <element signature="n#getregDistricts#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#676#785#0" expanded="false" />
+            <element signature="e#890#999#0" expanded="false" />
+            <element signature="n#getVillageWard#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#1103#1209#0" expanded="false" />
+            <element signature="n#getregKaya#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#1303#1411#0" expanded="false" />
+            <element signature="n#getdisKaya#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#1507#1615#0" expanded="false" />
+            <element signature="n#getpeopleInkaya#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#4143#4223#0" expanded="false" />
+            <element signature="n#create#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#4264#4344#0" expanded="false" />
+            <element signature="n#store#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#4424#4529#0" expanded="false" />
+            <element signature="n#storeDistrict#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#4587#4700#0" expanded="false" />
+            <element signature="e#4604#4699#1" expanded="false" />
+            <element signature="e#4710#4788#0" expanded="false" />
+            <element signature="n#storeRegion#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#4838#4912#0" expanded="false" />
+            <element signature="e#4853#4911#1" expanded="false" />
+            <element signature="e#4922#5023#0" expanded="false" />
+            <element signature="n#storeWard#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#5077#5184#0" expanded="false" />
+            <element signature="e#5090#5183#1" expanded="false" />
+            <element signature="e#5194#5299#0" expanded="false" />
+            <element signature="n#storeVillage#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#5357#5464#0" expanded="false" />
+            <element signature="e#5373#5463#1" expanded="false" />
+            <element signature="e#5472#5562#0" expanded="false" />
+            <element signature="n#show#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#5625#5733#0" expanded="false" />
+            <element signature="n#edit#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#5775#5875#0" expanded="false" />
+            <element signature="n#update#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#6517#6617#0" expanded="false" />
+            <element signature="n#updateStatus#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#6817#6919#0" expanded="false" />
+            <element signature="n#destroy#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#7012#7114#0" expanded="false" />
+            <element signature="n#destroyRegion#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#7215#7317#0" expanded="false" />
+            <element signature="n#destroyDistrict#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#7422#7524#0" expanded="false" />
+            <element signature="n#destroyWard#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#7617#7719#0" expanded="false" />
+            <element signature="n#destroyVillage#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#7823#7915#0" expanded="false" />
+            <element signature="n#RegionDetails#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#8127#8405#0" expanded="false" />
+            <element signature="e#8255#8395#0" expanded="false" />
+            <element signature="e#8590#8685#0" expanded="false" />
+            <element signature="n#DistrictDetails#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#8804#9371#0" expanded="false" />
+            <element signature="e#9069#9209#0" expanded="false" />
+            <element signature="e#9414#9504#0" expanded="false" />
+            <element signature="n#WardDetails#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#9588#9894#0" expanded="false" />
+            <element signature="e#9937#10031#0" expanded="false" />
+            <element signature="n#VillageDetails#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#10118#10380#0" expanded="false" />
+            <element signature="e#10423#10515#0" expanded="false" />
+            <element signature="n#DistributionList#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#10826#10920#0" expanded="false" />
+            <element signature="n#updateRegion#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#11107#11201#0" expanded="false" />
+            <element signature="n#updateDistrict#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#11464#11558#0" expanded="false" />
+            <element signature="n#updateWard#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#11781#11875#0" expanded="false" />
+            <element signature="n#updateVillage#0;n#kayaController#0;n#!!top" expanded="false" />
+            <element signature="e#12119#12221#0" expanded="false" />
+            <element signature="n#districtWardList#0;n#kayaController#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="23" selection-start="2064" selection-end="2075" vertical-scroll-proportion="-3.4" vertical-offset="803" max-vertical-offset="2178">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="84" selection-start="337" selection-end="413" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="1710">
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#md-whiteframe#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#1;n#div#1;n#div#0;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#2;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#div#2;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#3;n#div#1;n#div#0;n#md-whiteframe#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/distribution.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="63" selection-start="6847" selection-end="6847" vertical-scroll-proportion="-12.074074" vertical-offset="1546" max-vertical-offset="2664">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/distributionCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="39" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.64600325" vertical-offset="486" max-vertical-offset="1764">
+          <folding />
         </state>
       </provider>
     </entry>

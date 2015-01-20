@@ -59,6 +59,12 @@ Route::get('districts/region/{id}',array('uses'=>'kayaController@getregDistricts
 Route::get('people/region/{id}',array('uses'=>'kayaController@getpeopleInRegion'));
 
 //getting people for specific region
+Route::get('people/village/{id}',array('uses'=>'kayaController@getpeopleInVillage'));
+
+//getting people for specific region
+Route::get('people/ward/{id}',array('uses'=>'kayaController@getpeopleInWard'));
+
+//getting people for specific region
 Route::get('people/district/{id}',array('uses'=>'kayaController@getpeopleInkaya'));
 
 

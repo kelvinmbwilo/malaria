@@ -105,7 +105,7 @@ class kayaController extends \BaseController {
         return json_encode($array);
 	}
 
-/**
+    /**
 	 * Display a listing of kaya for specific district.
 	 *
 	 * @param int $regid
@@ -119,6 +119,42 @@ class kayaController extends \BaseController {
         $array['kaya'] =  Kaya::where('region',$regid)->count();
         $array['done'] =  Kaya::where('region',$regid)->where('status',1)->count();
         $array['not_done'] =  Kaya::where('region',$regid)->where('status',0)->count();
+        $array['total'] = $array['male'] + $array['female'];
+        return json_encode($array);
+	}
+
+    /**
+	 * Display a summary distribution for a ward.
+	 *
+	 * @param int $wardId
+	 * @return Response
+	 */
+	public function getpeopleInWard($wardId)
+	{
+        $array = array();
+		$array['male'] =  Kaya::where('ward',$wardId)->sum('male');
+        $array['female'] =  Kaya::where('ward',$wardId)->sum('female');
+        $array['kaya'] =  Kaya::where('ward',$wardId)->count();
+        $array['done'] =  Kaya::where('ward',$wardId)->where('status',1)->count();
+        $array['not_done'] =  Kaya::where('ward',$wardId)->where('status',0)->count();
+        $array['total'] = $array['male'] + $array['female'];
+        return json_encode($array);
+	}
+
+    /**
+	 * Display a summary distribution for a village.
+	 *
+	 * @param int $vilId
+	 * @return Response
+	 */
+	public function getpeopleInVillage($vilId)
+	{
+        $array = array();
+		$array['male'] =  Kaya::where('village',$vilId)->sum('male');
+        $array['female'] =  Kaya::where('village',$vilId)->sum('female');
+        $array['kaya'] =  Kaya::where('village',$vilId)->count();
+        $array['done'] =  Kaya::where('village',$vilId)->where('status',1)->count();
+        $array['not_done'] =  Kaya::where('village',$vilId)->where('status',0)->count();
         $array['total'] = $array['male'] + $array['female'];
         return json_encode($array);
 	}
@@ -477,6 +513,20 @@ class kayaController extends \BaseController {
      * @return Response
      */
     public function updateVillage($id)
+    {
+        $village = Village::find($id);
+        $village->name = Input::get('val');
+        $village->save();
+        return json_encode(array('id'=>$village->id,'name'=>$village->name));
+    }
+
+    /**
+     * list of wards for districts.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function districtWardList($id)
     {
         $village = Village::find($id);
         $village->name = Input::get('val');
