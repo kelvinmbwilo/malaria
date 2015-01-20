@@ -45,7 +45,6 @@ angular.module("malariaApp")
 
 
         $scope.showWardDetails = function(district){
-            alert(district.id);
             $scope.wardVisible = [];
             $scope.villageVisible = [];
             if(district.wards == null){
