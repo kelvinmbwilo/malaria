@@ -277,6 +277,50 @@ class kayaController extends \BaseController {
 		$kaya = Kaya::find($id);
         $kaya->delete();
 	}
+    /**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroyRegion($id)
+	{
+		$kaya = Region::find($id);
+        $kaya->delete();
+	}
+    /**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroyDistrict($id)
+	{
+		$kaya = District::find($id);
+        $kaya->delete();
+	}
+    /**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroyWard($id)
+	{
+		$kaya = Ward::find($id);
+        $kaya->delete();
+	}
+/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroyVillage($id)
+	{
+		$kaya = Village::find($id);
+        $kaya->delete();
+	}
 
     /**
 	 * return the details of the region.
@@ -395,7 +439,7 @@ class kayaController extends \BaseController {
         $region = Region::find($id);
         $region->region = Input::get('val');
         $region->save();
-        return $region->region;
+        return $region;
     }
 
     /**
@@ -406,10 +450,10 @@ class kayaController extends \BaseController {
      */
     public function updateDistrict($id)
     {
-        $district = Region::find($id);
+        $district = District::find($id);
         $district->district = Input::get('val');
         $district->save();
-        return $district->district;
+        return json_encode(array('id'=>$district->id,'district'=>$district->district));
     }
 
     /**
@@ -420,10 +464,10 @@ class kayaController extends \BaseController {
      */
     public function updateWard($id)
     {
-        $ward = Region::find($id);
+        $ward = Ward::find($id);
         $ward->name = Input::get('val');
         $ward->save();
-        return $ward->name;
+        return json_encode(array('id'=>$ward->id,'name'=>$ward->name));
     }
 
     /**
@@ -437,7 +481,7 @@ class kayaController extends \BaseController {
         $village = Village::find($id);
         $village->name = Input::get('val');
         $village->save();
-        return $village->name;
+        return json_encode(array('id'=>$village->id,'name'=>$village->name));
     }
 
 

@@ -1,15 +1,19 @@
 <h1>Stations Page</h1>
 <md-whiteframe class="md-whiteframe-z2" layout="row" layout-align="start start" style="padding-bottom: 20px">
-    <div flex="60">
+    <div flex="50">
+
         <form name="orgUnitForm" novalidate ng-if="data.currentLevel < 5">
             <label>Name &nbsp;&nbsp;&nbsp;</label>
-            <input ng-model="data.addedOrgUnit" required name="orgUnit" id="orgUnit" type="text" style="border: 0px;border-bottom: 2px dashed;width: 70%" >
+            <input ng-model="data.addedOrgUnit" required name="orgUnit" id="orgUnit" type="text" style="border: 0px;border-bottom: 2px dashed;width: 75%" >
             <md-button class="md-primary md-hue-3 md-raised" ng-disabled="orgUnitForm.orgUnit.$error.required || data.currentLevel > 4" ng-click="addOrgUnit(data.addedOrgUnit)">Add</md-button>
-            <span class="help-block" ng-if="!orgUnitForm.orgUnit.$error.required">Add {{ data.addedOrgUnit }} to {{ data.currentOrgUnit }}</span>
+            <span class="help-block" ng-if="!orgUnitForm.orgUnit.$error.required && !addingOrg">Add {{ data.addedOrgUnit }} to {{ data.currentOrgUnit }}</span>
+            <span class="help-block" ng-if="addingOrg"><i class="fa fa-spinner fa-spin"></i> Adding {{ data.addedOrgUnit }} to {{ data.currentOrgUnit }}</span>
         </form>
-        <div ng-include="currentListing"></div>
+        <div ng-include="currentListing" style="margin-right: 25px"></div>
     </div>
-    <div flex="40">
+    <div flex="5">
+        </div>
+    <div flex="45">
         <abn-tree
                 tree-data         = "data.orgUnit"
                 tree-control      = "my_tree"

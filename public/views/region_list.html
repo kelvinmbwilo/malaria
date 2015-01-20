@@ -5,11 +5,14 @@
                 <div class="md-tile-left">
                 </div>
                 <div class="md-tile-content">
-                    <h3>{{region.region}}</h3>
+                    <h3 ng-if="!currentEditRegion[region.id]">{{region.region}}</h3>
+                    <div ng-if="currentEditRegion[region.id]"><input ng-model="data.editingregion" type="text"></div>
                     <h4>{{region.details.districts }} Districts, {{ region.details.ward }} Wards, {{region.details.village }} Villages {{region.details.households }} Households </h4>
                 </div>
-                <div class="md-tile-right">
-                    <md-button ng-click="showEdit($event,region.id,'region')" title="Edit {{region.region}} " class="md-fab md-raised" style="width: 30px;height: 30px"><i class="fa fa-pencil"></i> </md-button>
+                <div class="md-tile-right" style="padding-right: 20px">
+                    <md-button ng-if="!currentEditRegion[region.id] && !currentSavingRegion[region.id]" ng-click="showEdit(region.region,region.id,'region')" title="Edit {{region.region}} " class="md-fab md-raised" style="width: 30px;height: 30px"><i class="fa fa-pencil"></i> </md-button>
+                    <md-button ng-if="currentEditRegion[region.id]" ng-click="editOrgUnit(region.id,'region',data.editingregion)" title="Save Changes" class="md-fab md-accent md-raised md-hue-3" style="width: 30px;height: 30px"><i class="fa fa-check text-success"></i> </md-button>
+                    <md-button ng-if="currentSavingRegion[region.id]"  title="Saving Changes" class="md-fab md-accent md-raised md-hue-3" style="width: 30px;height: 30px"><i class="fa fa-spin fa-spinner"></i> </md-button>
                     <md-button ng-click="showConfirm($event,region.id,'region')" title="Delete {{region.region}}" class="md-fab md-raised md-warn" style="width: 30px;height: 30px"><i class="fa fa-trash-o"></i> </md-button>
                 </div>
             </md-item-content>

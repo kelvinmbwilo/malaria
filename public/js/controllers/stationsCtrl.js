@@ -4,6 +4,7 @@
 angular.module("malariaApp")
     .controller('stationsCtrl',function($scope,$http,$mdDialog){
         var  tree;
+        $scope.showLoading = false;
         $scope.getRegionChildren = function(id){
             var child = [];
             var regionId = id;
@@ -99,21 +100,21 @@ angular.module("malariaApp")
         $scope.listDistrict =function(id){
             $scope.currentListing = "views/district_list.html";
             $http.get("index.php/districtdetails/"+id).success(function(data){
-                $scope.distictss =  data;
+                $scope.data.distictss =  data;
             });
         }
         //list ya kata
         $scope.listWards =function(id){
             $scope.currentListing = "views/ward_list.html";
             $http.get("index.php/warddetails/"+id).success(function(data){
-                $scope.wardss =  data;
+                $scope.data.wardss =  data;
             });
         }
         //list ya vijiji
         $scope.listVillage =function(id){
             $scope.currentListing = "views/village_list.html";
             $http.get("index.php/villagedetails/"+id).success(function(data){
-                $scope.villagess =  data;
+                $scope.data.villagess =  data;
             });
         }
 
@@ -127,110 +128,190 @@ angular.module("malariaApp")
 
         $scope.addOrgUnit = function(val) {
             $scope.data.addedOrgUnit = null;
+            $scope.addingOrg = true;
             var b;
             b = tree.get_selected_branch();
             switch (b.level){
                 case 1:
                     $http.post("index.php/region", {val:val}).success(function (newKaya) {
+                        $scope.data.regions.push({
+                            region: newKaya.region,
+                            id:newKaya.id
+                        })
                         return tree.add_branch(b, {
                             label: newKaya.region,
                             level: b.level+1,
                             id :newKaya.id,
                             children:$scope.getRegionChildren(newKaya.id)
                         });
+                        $scope.addingOrg = false;
                     })
                     break;
                 case 2:
                     $http.post("index.php/adddistrict/"+b.id, {val:val}).success(function (newKaya) {
+                        $scope.data.distictss.push({
+                            district: newKaya.district,
+                            id:newKaya.id
+                        })
                         return tree.add_branch(b, {
                             label: newKaya.district,
                             level: b.level+1,
                             id:newKaya.id,
                             children:[]
                         });
+                        $scope.addingOrg = false;
                     })
                     break;
                 case 3:
                     $http.post("index.php/addward/"+b.id, {val:val}).success(function (newKaya) {
+                        $scope.data.wardss.push({
+                            ward: newKaya.name,
+                            id:newKaya.id
+                        })
                         return tree.add_branch(b, {
                             label: newKaya.name,
                             level: b.level+1,
                             id:newKaya.id,
                             children:[]
                         });
+                        $scope.addingOrg = false;
                     })
                     break;
                 case 4:
                     $http.post("index.php/addvillage/"+ b.id, {val:val}).success(function (newKaya) {
+                        $scope.data.villagess.push({
+                            village: newKaya.name,
+                            id:newKaya.id
+                        })
                         return tree.add_branch(b, {
                             label: newKaya.name,
                             level: b.level+1,
                             id:newKaya.id,
                             children:[]
                         });
+                        $scope.addingOrg = false;
                     })
                     break;
-                default: alert("this is the smallest level")
+                default:
+                    $scope.addingOrg = false;
+                    alert("this is the smallest level");
             }
 
         };
 
-        $scope.showEdit = function(ev,id,type) {
-            $mdDialog.show({
-                controller: DialogController,
-                templateUrl: 'views/editOrgunit.html',
-                targetEvent: ev
-            })
-                .then(function(answer) {
-                    $scope.alert = 'You said the information was "' + answer + '".';
-                }, function() {
-                    $scope.alert = 'You cancelled the dialog.';
-                });
+        $scope.currentEditRegion = [];
+        $scope.currentSavingRegion = [];
+        $scope.currentEditDistrict = [];
+        $scope.currentSavingDistrict = [];
+        $scope.currentEditWard = [];
+        $scope.currentSavingWard = [];
+        $scope.currentEditVillage = [];
+        $scope.currentSavingVillage = [];
+        $scope.showEdit = function(curVal,id,type) {
+            if(type == 'region'){
+                $scope.currentEditRegion = [];
+                $scope.currentEditRegion[id] = true;
+                $scope.data.editingregion = curVal;
+            }if(type == 'district'){
+                $scope.currentEditDistrict = [];
+                $scope.currentEditDistrict[id] = true;
+                $scope.data.editingDistrict = curVal;
+            }if(type == 'ward'){
+                $scope.currentEditWard = [];
+                $scope.currentEditWard[id] = true;
+                $scope.data.editingWard = curVal;
+            }if(type == 'village'){
+                $scope.currentEditVillage = [];
+                $scope.currentEditVillage[id] = true;
+                $scope.data.editingVillage = curVal;
+            }
+
         };
 
 //        edditing org units
         $scope.editOrgUnit = function(id,type,val){
             if(type == 'region'){
+                $scope.currentEditRegion = [];
+                $scope.currentSavingRegion[id] = true;
                 $http.post("index.php/edit/"+type+"/"+id, {val:val}).success(function (newVal) {
-
+                    for (var i = 0; i < $scope.data.regions.length; i++) {
+                        if ($scope.data.regions[i].id == newVal.id) {
+                            $scope.data.regions[i] = newVal;
+                            break;
+                        }
+                    }
+                    $scope.currentEditRegion = [];
+                    $scope.currentSavingRegion = [];
                 });
             }if(type == 'district'){
+                $scope.currentEditDistrict = [];
+                $scope.currentSavingDistrict[id] = true;
                 $http.post("index.php/edit/"+type+"/"+id, {val:val}).success(function (newVal) {
-
+                    for (var i = 0; i < $scope.data.distictss.length; i++) {
+                        if ($scope.data.distictss[i].id == newVal.id) {
+                            $scope.data.distictss[i].district = newVal.district;
+                            break;
+                        }
+                    }
+                    $scope.currentEditDistrict = [];
+                    $scope.currentSavingDistrict = [];
                 });
             }if(type == 'ward'){
+                $scope.currentEditWard = [];
+                $scope.currentSavingWard[id] = true;
                 $http.post("index.php/edit/"+type+"/"+id, {val:val}).success(function (newVal) {
-
+                    for (var i = 0; i < $scope.data.wardss.length; i++) {
+                        if ($scope.data.wardss[i].id == newVal.id) {
+                            $scope.data.wardss[i].ward = newVal.name;
+                            break;
+                        }
+                    }
+                    $scope.currentEditWard = [];
+                    $scope.currentSavingWard = [];
                 });
-            }if(type == 'village'){
-                $http.post("index.php/edit/"+type+"/"+id, {val:val}).success(function (newVal) {
 
+            }if(type == 'village'){
+                $scope.currentEditVillage = [];
+                $scope.currentSavingVillage[id] = true;
+                $http.post("index.php/edit/"+type+"/"+id, {val:val}).success(function (newVal) {
+                    for (var i = 0; i < $scope.data.villagess.length; i++) {
+                        if ($scope.data.villagess[i].id == newVal.id) {
+                            $scope.data.villagess[i].village = newVal.name;
+                            break;
+                        }
+                    }
+                    $scope.currentEditVillage = [];
+                    $scope.currentSavingVillage = [];
                 });
             }
         }
 
-        //        edditing org units
+        //        deleting org units
+        $scope.deletedRegion = [];
+        $scope.deletedDistrict = [];
+        $scope.deletedWard = [];
+        $scope.deletedVillage = [];
         $scope.deleteOrgUnit = function(id,type){
             if(type == 'region'){
                 $http.post("index.php/delete/"+type+"/"+id).success(function (newVal) {
-
+                    $scope.deletedRegion[id] = true;
                 });
             }if(type == 'district'){
                 $http.post("index.php/delete/"+type+"/"+id).success(function (newVal) {
-
+                    $scope.deletedDistrict[id] = true;
                 });
             }if(type == 'ward'){
                 $http.post("index.php/delete/"+type+"/"+id).success(function (newVal) {
-
+                    $scope.deletedWard[id] = true;
                 });
             }if(type == 'village'){
                 $http.post("index.php/delete/"+type+"/"+id).success(function (newVal) {
-
+                    $scope.deletedVillage[id] = true;
                 });
             }
         }
         $scope.deletedOrgunit = [];
-        $scope.deletedRegion = [];
+
         $scope.showConfirm = function(ev,id,type) {
             var confirm = $mdDialog.confirm()
                 .title('Are you sure you want to delete this ' + type)
@@ -240,8 +321,7 @@ angular.module("malariaApp")
                 .cancel('Cancel')
                 .targetEvent(ev);
             $mdDialog.show(confirm).then(function() {
-                  //$scope.deleteOrgUnit(id,type);
-                  $scope.deletedRegion[id] = true;
+                  $scope.deleteOrgUnit(id,type);
             }, function() {
 
             });

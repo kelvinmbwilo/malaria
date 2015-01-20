@@ -17,6 +17,10 @@ angular.module("malariaApp")
             return function(friend) { return friend.region_id == query; }
         };
 
+        $scope.districtWards = function(){
+
+        }
+
         $scope.saveKaya = function(kaya){
             $scope.currentSaving = true;
             $http.post("index.php/kaya", kaya).success(function (newKaya) {
@@ -58,11 +62,10 @@ angular.module("malariaApp")
 
             $http.post("index.php/kaya/"+kaya.id, kaya).success(function (newKaya) {
                 for (var i = 0; i < $scope.data.kaya.length; i++) {
-                    if ($scope.data.kaya[i].id == kaya.id) {
-                        $scope.data.kaya[i] = kaya;
+                    if ($scope.data.kaya[i].id == newKaya.id) {
+                        $scope.data.kaya[i] = newKaya;
                         break;
                     }
-
                 }
                 $scope.kayaUpdatedSuccess = true;
                 $scope.currentUpdating = false;
