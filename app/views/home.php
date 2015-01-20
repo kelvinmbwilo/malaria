@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="malariaApp">
+<html ng-app="malariaApp" style="background-image: url(body-bg.png);background-repeat: repeat">
 <head>
     <title>Malaria App</title>
     <script src="<?php echo asset('js/jquery.js') ?>"></script>
@@ -15,20 +15,23 @@
 
     <script src="<?php echo asset('js/bootstrap.js') ?>"></script>
     <link href="<?php echo asset('css/bootstrap.css') ?>" rel="stylesheet" />
+    <script src="<?php echo asset('js/abn_tree_directive.js') ?>"></script>
+    <link href="<?php echo asset('css/abn_tree.css') ?>" rel="stylesheet" />
     <link href="<?php echo asset('css/bootstrap-theme.css') ?>" rel="stylesheet" />
     <link href="<?php echo asset('font-awesome/css/font-awesome.css') ?>" rel="stylesheet" />
     <link rel="stylesheet" href="<?php echo asset('bower_components/angular-material/angular-material.css') ?>">
-    <link rel="stylesheet" href="<?php echo asset('bower_components/angular-material/angular-material.css') ?>">
     <script>
-        angular.module("malariaApp",['ngRoute','ngResource','ngAnimate','ngMaterial']);
+        angular.module("malariaApp",['ngRoute','ngResource','ngAnimate','ngMaterial','angularBootstrapNavTree']);
     </script>
     <script src="<?php echo asset('js/routes.js') ?>"></script>
     <script src="<?php echo asset('js/controllers/malariaAppCtrl.js') ?>"></script>
     <script src="<?php echo asset('js/controllers/kayaCtrl.js') ?>"></script>
     <script src="<?php echo asset('js/controllers/distributionCtrl.js') ?>"></script>
     <script src="<?php echo asset('js/controllers/distributeCtrl.js') ?>"></script>
+    <script src="<?php echo asset('js/controllers/stationsCtrl.js') ?>"></script>
+
 </head>
-<body ng-controller="malariaAppCtrl">
+<body ng-controller="malariaAppCtrl" style="background-image: url(body-bg.png);background-repeat: repeat">
 <div class="container">
     <header>
         <div class="row">
@@ -66,19 +69,24 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li ng-class="{ active: isActive('/home') }">
-                        <a href="#home"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                        <md-button href="#home">Home</md-button>
+<!--                        <a href="#home"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>-->
                     </li>
                     <li ng-class="{ active: isActive('/registration') }">
-                        <a  href="#registration">Registration</a>
+                        <md-button href="#registration">Registration</md-button>
+<!--                        <a  href="#registration">Registration</a>-->
                     </li>
                     <li ng-class="{ active: isActive('/distribution') }">
-                        <a  href="#distribution">Summary</a>
+                        <md-button href="#distribution">Summary</md-button>
+<!--                        <a  href="#distribution">Summary</a>-->
                     </li>
                     <li ng-class="{ active: isActive('/distribute') }">
-                        <a  href="#distribute">Distribute</a>
+                        <md-button href="#distribute">Distribute</md-button>
+<!--                        <a  href="#distribute">Distribute</a>-->
                     </li>
                     <li ng-class="{ active: isActive('/stations') }">
-                        <a ng-class="{ active: isActive('/stations') }" href="#stations">Stations</a>
+                        <md-button href="#stations">Stations</md-button>
+<!--                        <a  href="#stations">Stations</a>-->
                     </li>
 
                 </ul>

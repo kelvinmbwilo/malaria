@@ -21,20 +21,11 @@ class District extends Eloquent {
         return $this->belongsTo('Region', 'region_id', 'id');
     }
 
-    public function arrivals(){
-        return $this->hasMany('ArrivalDistrict', 'district_id', 'id');
+    public function ward(){
+        return $this->hasMany('Ward', 'district_id', 'id');
     }
 
-    public function stock(){
-        return $this->hasMany('DistrictStock', 'district_id', 'id');
+    public function village(){
+        return $this->hasMany('Village', 'district_id', 'id');
     }
-
-    public function package(){
-        return $this->hasMany('DistrictPackage', 'district_id', 'id');
-    }
-
-    public function facility(){
-        return $this->hasMany('Facility', 'district_id', 'id');
-    }
-
 }

@@ -11,7 +11,8 @@ angular.module("malariaApp")
         $scope.kayaUpdatedSuccess = false;
         $scope.kayaSavedFalue = false;
         $scope.kayaUpdateFalue = false;
-       $scope.currentKaya.uid = parseInt(Math.random()*1000000);
+//       $scope.currentKaya.uid = parseInt(Math.random()*1000000);
+       $scope.currentKaya.uid = 0;
         $scope.matchName = function(query) {
             return function(friend) { return friend.region_id == query; }
         };
@@ -47,7 +48,8 @@ angular.module("malariaApp")
             $scope.kayaUpdatedSuccess = false;
             $scope.currentUpdating = false;
             $scope.kayaUpdateFalue = false;
-            $scope.currentKaya.uid = parseInt(Math.random()*1000000);
+//            $scope.currentKaya.uid = parseInt(Math.random()*1000000);
+            $scope.currentKaya.uid = 0;
         }
 
         $scope.updateKaya = function(kaya){

@@ -5,8 +5,8 @@
             <span><label>Scan(write) the Code on Voucher</label> &nbsp;&nbsp;&nbsp;&nbsp;<input name="kayaId" ng-change="checkKaya(data.kayaId)" ng-model="data.kayaId" id="voucher_no" type="text" style="border: 0px;border-bottom: 2px dotted" required="">
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span ng-if="!currentKayaPresent"> <strong> {{ addTwo(currentKaya.male,currentKaya.female) }} Net(s)</strong>  </span>
-        <md-button ng-disabled="currentKayaPresent || currentKaya.status == 1" class="md-hue-3 md-primary md-raised" ng-click="distributeKaya(data.kayaId)">Distribute</md-button>
+                <span ng-if="!currentKayaPresent"> <strong> {{ addTwo(currentKaya.male,currentKaya.female)/2 |number:0 }} Net(s)</strong>  </span>
+        <span ng-hide="currentKayaPresent || currentKaya.status == 1"><md-button ng-disabled="currentKayaPresent || currentKaya.status == 1" class="md-fab md-hue-3 md-primary md-raised" ng-click="distributeKaya(data.kayaId)" style="height: 40px;width:40px"><i class="fa fa-check"></i> </md-button> Distribute</span>
         <!--<md-button class="md-hue-3 md-primary md-raised" ng-click="activatecheckKaya()">Check Again</md-button>-->
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span ng-if="checkingKaya"><i class="fa fa-spin fa-spinner fa-2x"></i> Checking... </span>

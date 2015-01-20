@@ -37,6 +37,12 @@ Route::post('kaya/{id}/distribute',array('uses'=>'kayaController@updateStatus'))
 //getting single kaya Information
 Route::get('kaya/{id}',array('uses'=>'kayaController@show'));
 
+//getting  wards from specific district
+Route::get('wards/district/{id}',array('uses'=>'kayaController@getwardDistricts'));
+
+//getting  villages from specific ward
+Route::get('village/ward/{id}',array('uses'=>'kayaController@getVillageWard'));
+
 //deleting kaya
 Route::post('kaya/delete/{id}',array('uses'=>'kayaController@destroy'));
 
@@ -54,4 +60,33 @@ Route::get('people/region/{id}',array('uses'=>'kayaController@getpeopleInRegion'
 
 //getting people for specific region
 Route::get('people/district/{id}',array('uses'=>'kayaController@getpeopleInkaya'));
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////adding organisation units /////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+//adding new kaya
+Route::post('region',array('uses'=>'kayaController@storeRegion'));
+
+//adding new kaya
+Route::post('adddistrict/{id}',array('uses'=>'kayaController@storeDistrict'));
+
+//adding new kaya
+Route::post('addward/{id}',array('uses'=>'kayaController@storeWard'));
+
+//adding new kaya
+Route::post('addvillage/{id}',array('uses'=>'kayaController@storeVillage'));
+
+//getting region details
+Route::get('regiondetails/{id}',array('uses'=>'kayaController@RegionDetails'));
+
+
+//getting districts details ---- taking regionID ----
+Route::get('districtdetails/{id}',array('uses'=>'kayaController@DistrictDetails'));
+
+//getting wards details ---taking district ID----
+Route::get('warddetails/{id}',array('uses'=>'kayaController@WardDetails'));
+
+//getting village details ---taking ward ID----
+Route::get('villagedetails/{id}',array('uses'=>'kayaController@VillageDetails'));
 

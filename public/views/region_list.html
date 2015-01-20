@@ -1,0 +1,17 @@
+<h2>Regions</h2>
+    <md-list>
+        <md-item ng-repeat="region in data.regions">
+            <md-item-content>
+                <div class="md-tile-left">
+                </div>
+                <div class="md-tile-content">
+                    <h3>{{region.region}}</h3>
+                    <h4>{{region.details.districts }} Districts, {{ region.details.ward }} Wards, {{region.details.village }} Villages {{region.details.households }} Households </h4>
+                </div>
+                <div class="md-tile-right">
+                    <md-button title="Edit {{region.region}} " class="md-fab md-raised" style="width: 30px;height: 30px"><i class="fa fa-pencil"></i> </md-button>
+                    <md-button title="Delete {{region.region}}" class="md-fab md-raised md-warn" style="width: 30px;height: 30px"><i class="fa fa-trash-o"></i> </md-button>
+                </div>
+            </md-item-content>
+        </md-item>
+    </md-list>

@@ -1,0 +1,17 @@
+<h2>Villages </h2>
+<md-list>
+    <md-item ng-repeat="village in villagess">
+        <md-item-content>
+            <div class="md-tile-left">
+            </div>
+            <div class="md-tile-content">
+                <h3>{{ village.village }}</h3>
+                <h4>{{ village.households }} Households </h4>
+            </div>
+            <div class="md-tile-right">
+                <md-button title="Edit {{village.village}} " class="md-fab md-raised" style="width: 30px;height: 30px"><i class="fa fa-pencil"></i> </md-button>
+                <md-button title="Delete {{village.village}}" class="md-fab md-raised md-warn" style="width: 30px;height: 30px"><i class="fa fa-trash-o"></i> </md-button>
+            </div>
+        </md-item-content>
+    </md-item>
+</md-list>

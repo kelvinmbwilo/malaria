@@ -5,6 +5,7 @@
         border-bottom-color:#000000 ;
         border-bottom-width:2px ;
         width: 100%;
+        background-color: #ffffff;
     }
     p{
         color: #000000;
@@ -20,11 +21,14 @@
                 <div class="col-sm-6" style="border-right-style: dotted;border-right-color: #000000;border-right-width:1px;margin-top: 15px;margin-bottom: 15px">
                     <form name="kayaForm" novalidate>
                         <div class="col-xs-12">
-                            <div class="col-xs-12">Region:
+                            <div class="col-xs-7">Voucher Number: <input type="text" class="entry" ng-model="currentKaya.uid" required/></div>
+
+                            <div class="col-xs-5">Region:
                                 <select class="entry" ng-model="currentKaya.region">
                                     <option ng-repeat="region in data.regions" value="{{ region.id }}">{{ region.region }}</option>
                                 </select>
                             </div>
+
                         </div>
                         <div class="col-xs-12">
                             <div class="col-xs-7">Wilaya:

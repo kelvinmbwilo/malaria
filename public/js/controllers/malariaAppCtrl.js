@@ -5,6 +5,9 @@ angular.module("malariaApp")
     .controller("malariaAppCtrl",function($scope,$http,$location){
         $scope.data ={};
         //getting all kayas
+        /**
+         * TODO : Refine this statement to fetch by chunks
+         */
         $http.get("index.php/kaya").success(function(res){
             $scope.data.kaya = res;
         });

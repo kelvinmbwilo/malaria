@@ -44,6 +44,28 @@ class kayaController extends \BaseController {
 	}
 
     /**
+	 * Display a listing of Wards for specific district.
+	 *
+	 * @param int $disid
+	 * @return Response
+	 */
+	public function getwardDistricts($disid)
+	{
+		return Ward::where('district_id',$disid)->get();
+	}
+
+    /**
+	 * Display a listing of Villages for specific ward.
+	 *
+	 * @param int $wardid
+	 * @return Response
+	 */
+	public function getVillageWard($wardid)
+	{
+		return Village::where('ward_id',$wardid)->get();
+	}
+
+    /**
 	 * Display a listing of kaya for specific region.
 	 *
 	 * @param int $regid
@@ -125,6 +147,60 @@ class kayaController extends \BaseController {
         return Kaya::create(Input::all());
 	}
 
+    /**
+	 * Store a newly created district in storage.
+	 *
+     * @param int $regid
+	 * @return Response
+	 */
+	public function storeDistrict($regid)
+	{
+        return District::create(array(
+            "region_id" => $regid,
+            "district" => Input::get("val")
+        ));
+	}
+
+    /**
+	 * Store a newly created region in storage.
+	 *
+	 * @return Response
+	 */
+	public function storeRegion()
+	{
+        return Region::create(array(
+            "region" => Input::get("val")
+        ));
+	}
+
+    /**
+	 * Store a newly created ward in storage.
+	 *
+     * @param int $disid
+	 * @return Response
+	 */
+	public function storeWard($disid)
+	{
+        return Ward::create(array(
+            "district_id" => $disid,
+            "name" => Input::get("val")
+        ));
+	}
+
+    /**
+	 * Store a newly created village in storage.
+	 *
+     * @param int $wardId
+	 * @return Response
+	 */
+	public function storeVillage($wardId)
+	{
+        return Village::create(array(
+            "ward_id" => $wardId,
+            "name" => Input::get("val")
+        ));
+	}
+
 
 	/**
 	 * Display the specified resource.
@@ -201,6 +277,107 @@ class kayaController extends \BaseController {
 		$kaya = Kaya::find($id);
         $kaya->delete();
 	}
+
+    /**
+	 * return the details of the region.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function RegionDetails($id)
+	{
+		$region = Region::find($id);
+        $arr = array();
+        $arr['districts'] = $region->district()->count();
+        $wardcount = 0;
+        $villagecount = 0;
+        foreach(District::where('region_id',$id)->get() as $district){
+           $wardcount += $district->ward()->count();
+            foreach(Ward::where('district_id',$district->id)->get() as $ward){
+                $villagecount += $ward->village()->count();
+            }
+        }
+        $arr['ward'] = $wardcount;
+        $arr['village'] = $villagecount;
+        $arr['households'] = Kaya::where('region',$id)->count();;
+        return json_encode($arr);
+	}
+
+    /**
+	 * return the details of the districts.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function DistrictDetails($id)
+	{
+		$region = Region::find($id);
+        $arr = array();
+        $i=0;
+        foreach(District::where('region_id',$id)->get() as $district){
+            $villagecount = 0;
+            $arr[$i]['district'] = $district->district;
+            $arr[$i]['ward'] = $district->ward()->count();
+            foreach(Ward::where('district_id',$district->id)->get() as $ward){
+                $villagecount += $ward->village()->count();
+            }
+            $arr[$i]['village'] = $villagecount;
+            $arr[$i]['households'] = Kaya::where('district',$district->id)->count();
+            $i++;
+        }
+        return json_encode($arr);
+	}
+
+    /**
+	 * return the details of the wards
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function WardDetails($id)
+	{
+        $arr = array();
+        $i=0;
+        foreach(Ward::where('district_id',$id)->get() as $ward){
+            $arr[$i]['ward'] = $ward->name;
+            $arr[$i]['village'] = $ward->village()->count();
+            $arr[$i]['households'] = Kaya::where('ward',$ward->id)->count();
+            $i++;
+        }
+        return json_encode($arr);
+	}
+
+    /**
+	 * return the details of the villages.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function VillageDetails($id)
+	{
+        $arr = array();
+        $i=0;
+        foreach(Village::where('ward_id',$id)->get() as $village){
+            $arr[$i]['village'] = $village->name;
+            $arr[$i]['households'] = Kaya::where('village',$village->id)->count();
+            $i++;
+        }
+        return json_encode($arr);
+	}
+
+    /**
+	 * return the details of the region.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function DistributionList($id)
+	{
+        return Kaya::where('village',$id)->get();
+	}
+
+
+
 
 
 }

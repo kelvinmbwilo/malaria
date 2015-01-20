@@ -23,7 +23,7 @@ angular.module("malariaApp").config( function($routeProvider){
 
     $routeProvider.when("/stations",{
         templateUrl: 'views/stations.html',
-        controller: 'malariaAppCtrl'
+        controller: 'stationsCtrl'
     });
 
 //    $routeProvider.when("/change_password",{
