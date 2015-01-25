@@ -29,18 +29,34 @@
     <script src="<?php echo asset('js/controllers/distributionCtrl.js') ?>"></script>
     <script src="<?php echo asset('js/controllers/distributeCtrl.js') ?>"></script>
     <script src="<?php echo asset('js/controllers/stationsCtrl.js') ?>"></script>
-
+    <script src="<?php echo asset('js/controllers/listCtrl.js') ?>"></script>
+<style>
+    @font-face {
+        font-family: myBoldFont;
+        src: url(<?php echo asset('Oswald/OpenSans-Bold.ttf') ?>);
+    }@font-face {
+        font-family: myLightFont;
+        src: url(<?php echo asset('Oswald/OpenSans-Regular.ttf') ?>);
+    }@font-face {
+        font-family: myRegularFont;
+        src: url(<?php echo asset('Oswald/Oswald-Regular.ttf') ?>);
+    }
+    body{
+        font-family: myLightFont ;
+    }
+</style>
 </head>
+
 <body ng-controller="malariaAppCtrl" style="background-image: url(body-bg.png);background-repeat: repeat">
-<div class="container">
+<div class="container-fluid" style="margin-right: 20px;margin-left:20px ">
     <header>
         <div class="row">
             <div class="col-md-2 hidden-sm">
                 <img alt="Brand" src="<?php echo asset('Nembo.png') ?>" style="height: 70px;width: 70px" class="img-rounded pull-left">
             </div>
             <div class="col-sm-12 col-md-8">
-                <h4 class="text-center" style="letter-spacing: 1px"> WIZARA YA AFYA NA USTAWI WA JAMII</h4>
-                <h4 class="text-center" style="letter-spacing: 1px"> MPANGO WA TAIFA WA KUDHIBITI MALARIA</h4>
+                <h4 class="text-center" style="letter-spacing: 1px;font-family: myBoldFont "> WIZARA YA AFYA NA USTAWI WA JAMII</h4>
+                <h4 class="text-center" style="letter-spacing: 1px;font-family: myBoldFont"> MPANGO WA TAIFA WA KUDHIBITI MALARIA</h4>
             </div>
             <div class="col-md-2 hidden-sm" >
                 <img alt="Brand" src="<?php echo asset('malaria.png') ?>" style="height: 70px;width: 70px" class="img-rounded pull-right">
@@ -82,6 +98,10 @@
                     </li>
                     <li ng-class="{ active: isActive('/distribute') }">
                         <md-button href="#distribute">Distribute</md-button>
+<!--                        <a  href="#distribute">Distribute</a>-->
+                    </li>
+                    <li ng-class="{ active: isActive('/distribution_list') }">
+                        <md-button href="#distribution_list">Distribution List</md-button>
 <!--                        <a  href="#distribute">Distribute</a>-->
                     </li>
                     <li ng-class="{ active: isActive('/stations') }">

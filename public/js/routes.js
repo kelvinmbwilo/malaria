@@ -26,6 +26,11 @@ angular.module("malariaApp").config( function($routeProvider){
         controller: 'stationsCtrl'
     });
 
+    $routeProvider.when("/distribution_list",{
+        templateUrl: 'views/distribution_list.html',
+        controller: 'listCtrl'
+    });
+
 //    $routeProvider.when("/change_password",{
 //        templateUrl: 'views/changepass.html',
 //        controller: 'settingsCtrl'

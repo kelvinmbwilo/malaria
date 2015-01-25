@@ -17,7 +17,7 @@ Route::get('/', function()
 });
 
 //getting kaya
-Route::get('kaya',array('uses'=>'kayaController@index'));
+Route::post('getkaya',array('uses'=>'kayaController@index'));
 
 //getting regions
 Route::get('regions',array('uses'=>'kayaController@getRegions'));
@@ -122,3 +122,8 @@ Route::post('delete/ward/{id}',array('uses'=>'kayaController@destroyWard'));
 
 //Deleting village
 Route::post('delete/village/{id}',array('uses'=>'kayaController@destroyVillage'));
+
+//////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////generating pdf /////////////////////////////////
+//getting village details ---taking ward ID----
+Route::get('distribution_list/{regid}/{disid}/{wardid}/{villid}',array('uses'=>'kayaController@generatePdf'));

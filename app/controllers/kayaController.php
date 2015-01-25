@@ -9,7 +9,7 @@ class kayaController extends \BaseController {
 	 */
 	public function index()
 	{
-		return Kaya::all();
+		return Kaya::where('region',Input::get('region'))->where('district',Input::get('district'))->where('ward',Input::get('ward'))->where('village',Input::get('village'))->get();
 	}
 
     /**
@@ -534,6 +534,25 @@ class kayaController extends \BaseController {
         return json_encode(array('id'=>$village->id,'name'=>$village->name));
     }
 
+    /**
+     * Print pdf of the distribution list.
+     *
+     * @param  int  $regid
+     * @param  int  $disid
+     * @param  int  $wardid
+     * @param  int  $villid
+     * @return Response
+     */
+    public function generatePdf($regid,$disid,$wardid,$villid){
 
+
+        $district = District::find($disid);
+        $ward     = Ward::find($wardid);
+        $village  = Village::find($villid);
+        $kaya =  Kaya::where('region',$regid)->where('district',$disid)->where('ward',$wardid)->where('village',$villid)->get();
+            $pdf = PDF::loadView('distribution',compact('kaya','district','ward','village'));
+            return $pdf->download('Distribution List.pdf'); //Download file
+
+    }
 
 }

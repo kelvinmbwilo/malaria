@@ -13,28 +13,17 @@ angular.module("malariaApp")
         $scope.kayaUpdateFalue = false;
 //       $scope.currentKaya.uid = parseInt(Math.random()*1000000);
        $scope.currentKaya.uid = 0;
-        $scope.matchName = function(query) {
-            return function(friend) { return friend.region_id == query; }
-        };
 
-        $scope.getWards = function(id){
-            $http.get("index.php/wards/district/"+id).success(function(distr){
-                $scope.data.disward = distr;
-            });
-        }
 
-        $scope.getVillages = function(id){
-            $http.get("index.php/village/ward/"+id).success(function(distr){
-                $scope.data.disvillage = distr;
-            });
-        }
+
 
         $scope.saveKaya = function(kaya){
             $scope.currentSaving = true;
             $http.post("index.php/kaya", kaya).success(function (newKaya) {
                 $scope.data.kaya.push(newKaya);
                 $scope.currentKaya = {};
-                $scope.currentKaya.uid = parseInt(Math.random()*1000000);
+//                $scope.currentKaya.uid = parseInt(Math.random()*1000000);
+                $scope.currentKaya.uid = 0;
                 $scope.kayaSavedSuccess = true;
                 $scope.currentSaving = false;
                 $scope.kayaSavedFalue = false;
@@ -108,8 +97,6 @@ angular.module("malariaApp")
             });
         }
 
-        $scope.findSum = function(kata){
-           return Math.floor(kata.male) + Math.floor(kata.female);
-        }
+
 
     })
