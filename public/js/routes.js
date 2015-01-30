@@ -6,6 +6,10 @@ angular.module("malariaApp").config( function($routeProvider){
         templateUrl: 'views/registration.html',
         controller: 'kayaCtrl'
     });
+    $routeProvider.when("/import",{
+        templateUrl: 'views/import.html',
+        controller: 'kayaCtrl'
+    });
 
     $routeProvider.when("/home",{
         templateUrl: 'views/home.html',
@@ -16,8 +20,19 @@ angular.module("malariaApp").config( function($routeProvider){
         templateUrl: 'views/distribution.html',
         controller: 'distributionCtrl'
     });
+
+    $routeProvider.when("/distribution_list1",{
+        templateUrl: 'views/distribution_list1.html',
+        controller: 'distributionCtrl'
+    });
+
     $routeProvider.when("/distribute",{
         templateUrl: 'views/distribute.html',
+        controller: 'distributeCtrl'
+    });
+
+    $routeProvider.when("/verify",{
+        templateUrl: 'views/verify.html',
         controller: 'distributeCtrl'
     });
 

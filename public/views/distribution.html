@@ -15,10 +15,10 @@
                 <th>Male</th>
                 <th>Female</th>
                 <th>Total</th>
-                <th>Required Nets</th>
-                <th>Households</th>
-                <th>Done</th>
-                <th>Remaining</th>
+                <th>Number of <br> Nets</th>
+                <th>Coupons</th>
+                <th>Redeemed <br> Coupons</th>
+                <th>Non Redeemed<br> Coupons</th>
                 <!--<th></th>-->
             </tr>
             <tr ng-repeat-start="region in data.regions" style="background-image: -webkit-gradient(linear, left top, left bottom, from(#E4E4E4), to(#FFFFFF))">
@@ -46,14 +46,14 @@
                             <th>
                             Details
                             </th>
-                            <th>Name</th>
+                            <th>District</th>
                             <th>Male</th>
                             <th>Female</th>
                             <th>Total</th>
-                            <th>Required Nets</th>
-                            <th>Households</th>
-                            <th>Done</th>
-                            <th>Not Done</th>
+                            <th>Number of <br> Nets</th>
+                            <th>Coupons</th>
+                            <th>Redeemed <br> Coupons</th>
+                            <th>Non Redeemed<br> Coupons</th>
                             <th></th>
                         </tr>
                         <tr ng-repeat-start="district in region.districts">
@@ -69,7 +69,7 @@
                             <td>{{ district.people.kaya }}</td>
                             <td>{{ district.people.done }}</td>
                             <td>{{ district.people.not_done }}</td>
-                            <td><span ng-if="district.people.kaya == district.people.done"><i class="fa fa-check text-success"></i> </span></td>
+                            <!--<td><span ng-if="district.people.kaya == district.people.done"><i class="fa fa-check text-success"></i> </span></td>-->
                         </tr>
                         <!--wards-->
                         <tr ng-repeat-end >
@@ -81,15 +81,14 @@
                                         <th>
                                             Details
                                         </th>
-                                        <th>Name</th>
+                                        <th>Ward</th>
                                         <th>Male</th>
                                         <th>Female</th>
                                         <th>Total</th>
-                                        <th>Required Nets</th>
-                                        <th>Households</th>
-                                        <th>Done</th>
-                                        <th>Not Done</th>
-                                        <th></th>
+                                        <th>Number of <br> Nets</th>
+                                        <th>Coupons</th>
+                                        <th>Redeemed <br> Coupons</th>
+                                        <th>Non Redeemed<br> Coupons</th>
                                     </tr>
                                     <tr ng-repeat-start="ward in district.ward">
                                         <td>
@@ -104,7 +103,7 @@
                                         <td>{{ ward.people.kaya }}</td>
                                         <td>{{ ward.people.done }}</td>
                                         <td>{{ ward.people.not_done }}</td>
-                                        <td><span ng-if="ward.people.kaya == ward.people.done"><i class="fa fa-check text-success"></i> </span></td>
+                                        <!--<td><span ng-if="ward.people.kaya == ward.people.done"><i class="fa fa-check text-success"></i> </span></td>-->
                                     </tr>
                                     <!--villages-->
                                     <tr ng-repeat-end >
@@ -113,15 +112,14 @@
                                             <h5>{{ ward.name }}  Net Distribution Status</h5>
                                             <table class="table table-bordered table-responsive">
                                                 <tr>
-                                                    <th>Name</th>
+                                                    <th>Village</th>
                                                     <th>Male</th>
                                                     <th>Female</th>
                                                     <th>Total</th>
-                                                    <th>Required Nets</th>
-                                                    <th>Households</th>
-                                                    <th>Done</th>
-                                                    <th>Not Done</th>
-                                                    <th></th>
+                                                    <th>Number of <br> Nets</th>
+                                                    <th>Coupons</th>
+                                                    <th>Redeemed <br> Coupons</th>
+                                                    <th>Non Redeemed<br> Coupons</th>
                                                 </tr>
                                                 <tr ng-repeat-start="village in ward.village">
                                                     <td>{{ village.name }}</td>
@@ -132,7 +130,7 @@
                                                     <td>{{ village.people.kaya }}</td>
                                                     <td>{{ village.people.done }}</td>
                                                     <td>{{ village.people.not_done }}</td>
-                                                    <td><span ng-if="village.people.kaya == village.people.done"><i class="fa fa-check text-success"></i> </span></td>
+                                                    <!--<td><span ng-if="village.people.kaya == village.people.done"><i class="fa fa-check text-success"></i> </span></td>-->
                                                 </tr>
                                                 <tr ng-repeat-end >
 

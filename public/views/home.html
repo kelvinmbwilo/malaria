@@ -13,18 +13,37 @@
     </md-whiteframe>
 
 </div>
-<div layout="column" layout-margin >
+<div layout="column" layout-margin style="margin-left: 15px;margin-right: 15px">
 <md-whiteframe class="md-whiteframe-z5" layout layout-align="center center">
 <md-tabs md-selected="selectedIndex">
-    <md-tab ng-repeat="region in data.regions" ng-disabled="tab.disabled" label="{{region.region}}">
+    <md-tab ng-repeat="region in data.regions" ng-disabled="tab.disabled" label="{{region.region}}" ng-click="getDetails(region)">
         <div class="demo-tab tab{{$index%4}}" layout="column" layout-fill layout-align="space-around center">
             <div><h2>{{ region.region }} Region Net Distribution Summary</h2></div>
-            <md-button class="md-warn" ng-click="removeTab( tab )">
-                Remove Tab
-                <md-tooltip>
-                    Click to remove this
-                </md-tooltip>
-            </md-button>
+            <!--<table class="table table-bordered table-responsive" style="background-image: url(mh.png);background-repeat: no-repeat;background-size: cover;">-->
+                <!--<tr>-->
+
+                    <!--<th>Name</th>-->
+                    <!--<th>Male</th>-->
+                    <!--<th>Female</th>-->
+                    <!--<th>Total</th>-->
+                    <!--<th>Required Nets</th>-->
+                    <!--<th>Households</th>-->
+                    <!--<th>Done</th>-->
+                    <!--<th>Not Done</th>-->
+                    <!--<th></th>-->
+                <!--</tr>-->
+                <!--<tr ng-repeat="district in region.districts">-->
+                    <!--<td>{{ district.district }}</td>-->
+                    <!--<td>{{ district.people.male }}</td>-->
+                    <!--<td>{{ district.people.female }}</td>-->
+                    <!--<td>{{ district.people.total }}</td>-->
+                    <!--<td>{{ district.people.total/2 | number:0 }}</td>-->
+                    <!--<td>{{ district.people.kaya }}</td>-->
+                    <!--<td>{{ district.people.done }}</td>-->
+                    <!--<td>{{ district.people.not_done }}</td>-->
+                    <!--<td><span ng-if="district.people.kaya == district.people.done"><i class="fa fa-check text-success"></i> </span></td>-->
+                <!--</tr>-->
+             <!--</table>-->
         </div>
     </md-tab>
 </md-tabs>

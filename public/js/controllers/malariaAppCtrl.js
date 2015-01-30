@@ -51,5 +51,26 @@ angular.module("malariaApp")
         $scope.findSum = function(kata){
             return Math.floor(kata.male) + Math.floor(kata.female);
         }
+        $scope.findDiff = function(answer){
+           if(answer/2 > 5){
+               return 5
+           }else{
+               return answer/2
+           }
+        }
+
+        $scope.getDetails =function(region){
+            if(region.districts == null){
+                $http.get("index.php/districts/region/"+region.id).success(function(distr){
+                    region.districts = distr;
+                    angular.forEach(region.districts,function(val){
+                        var district = val;
+                        $http.get("index.php/people/district/"+val.id).success(function(ppl){
+                            district.people = ppl;
+                        });
+                    });
+                });
+            }
+        }
 
     })

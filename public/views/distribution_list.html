@@ -50,8 +50,16 @@
         <input type="text" class="entry">
     </div>
 </div>
-    <md-button class="pull-right md-primary md-hue-3 md-raised" ng-click="getList(currentKaya)" style="margin: 15px">Get List</md-button>
-   <md-button ng-show="showList && data.kaya.length != 0" class=" pull-right md-fab md-raised" style="width: 35px;height: 35px;margin: 15px"><img src="bower_components/icons/ic_print_24px.svg"> </md-button>
+    <md-button class="pull-right md-primary md-hue-3 md-raised" ng-click="getList(currentKaya)" style="margin: 15px">Get List
+        <md-tooltip>
+           Display The list
+        </md-tooltip>
+    </md-button>
+   <md-button href="index.php/distribution_list/{{ currentKaya.region }}/{{ currentKaya.district }}/{{ currentKaya.ward }}/{{ currentKaya.village }}" target="_blank" ng-show="showList && data.kaya.length != 0" class=" pull-right md-fab md-raised" style="width: 35px;height: 35px;margin: 15px"><img src="bower_components/icons/ic_print_24px.svg">
+       <md-tooltip>
+           Print The list
+       </md-tooltip>
+   </md-button>
 
 <md-whiteframe class="md-whiteframe-z5" ng-show="showList">
     <div>

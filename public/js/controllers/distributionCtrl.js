@@ -88,6 +88,36 @@ angular.module("malariaApp")
         $scope.hideVillageDetails = function(ward){
             $scope.villageVisible[ward.id] = false;
         }
+        $scope.showDisList = false;
+        $scope.getList = function(currentKaya){
+            $scope.showDisList = false;
+            $http.get("index.php/warddetails/"+currentKaya.district).success(function(distr){
+                $scope.showDisList = true;
+                $scope.data.onedistrict = {};
+                $http.get("index.php/wards/district/"+currentKaya.district).success(function(distr){
+                    $scope.data.onedistrict.wardlist = distr;
+                    $scope.data.onedistrict.villagelist = [];
+                    angular.forEach($scope.data.onedistrict.wardlist,function(val){
+                        var ward = val;
+                        $http.get("index.php/people/ward/"+val.id).success(function(ppl){
+                            ward.people = ppl;
+                        });
+                        $http.get("index.php/village/ward/"+ward.id).success(function(distr){
+                            ward.villagelist = distr;
+                            ;
+                            angular.forEach(ward.villagelist,function(val){
+                                var vill = val;
+                                $scope.data.onedistrict.villagelist.push(val);
+                                $http.get("index.php/people/village/"+val.id).success(function(ppl){
+                                    vill.people = ppl;
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+
+        }
 
 
 

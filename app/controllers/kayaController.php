@@ -96,6 +96,7 @@ class kayaController extends \BaseController {
 	public function getpeopleInkaya($disid)
 	{
         $array = array();
+        $array['name'] = District::find($disid)->district;
 		$array['male'] =  Kaya::where('district',$disid)->sum('male');
         $array['female'] =  Kaya::where('district',$disid)->sum('female');
         $array['kaya'] =  Kaya::where('district',$disid)->count();
@@ -246,7 +247,7 @@ class kayaController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return Kaya::find($id);
+		return Kaya::where('uid',$id)->first();
 	}
 
 
@@ -294,7 +295,7 @@ class kayaController extends \BaseController {
 	 */
 	public function updateStatus($id)
 	{
-        $kaya = Kaya::find($id);
+        $kaya = Kaya::where('uid',$id)->first();
         $kaya->status = 1;
         $kaya->distribution_date = date("d-m-Y");
         $kaya->save();
@@ -535,7 +536,38 @@ class kayaController extends \BaseController {
     }
 
     /**
-     * Print pdf of the distribution list.
+     * Print pdf of the Distribution list.
+     *
+     * @param  int  $regid
+     * @param  int  $disid
+     * @return Response
+     */
+    public function generatePdf1($regid,$disid){
+
+
+        $district = District::find($disid);
+        $region  = Region::find($regid);
+        $villag = array();
+        $j = 0;
+        foreach(Ward::where('district_id',$disid)->get() as $ward){
+            foreach(Village::where('ward_id',$ward->id)->get() as $village){
+                $array = array();
+                $villag[$j]['name'] = $village->name;
+                $villag[$j]['male'] =  Kaya::where('village',$village->id)->sum('male');
+                $villag[$j]['female'] =  Kaya::where('village',$village->id)->sum('female');
+                $villag[$j]['kaya'] =  Kaya::where('village',$village->id)->count();
+                $villag[$j]['total'] = $villag[$j]['male'] + $villag[$j]['female'];
+                $j++;
+            }
+        }
+        sort($villag);
+            $pdf = PDF::loadView('distribution1',compact('region','district','villag'));
+            return $pdf->download('Distribution List.pdf'); //Download file
+
+
+    }
+    /**
+     * Print pdf of the Issuing list.
      *
      * @param  int  $regid
      * @param  int  $disid

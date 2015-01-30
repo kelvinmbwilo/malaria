@@ -20,7 +20,7 @@ angular.module("malariaApp")
         $scope.saveKaya = function(kaya){
             $scope.currentSaving = true;
             $http.post("index.php/kaya", kaya).success(function (newKaya) {
-                $scope.data.kaya.push(newKaya);
+//                $scope.data.kaya.push(newKaya);
                 $scope.currentKaya = {};
 //                $scope.currentKaya.uid = parseInt(Math.random()*1000000);
                 $scope.currentKaya.uid = 0;

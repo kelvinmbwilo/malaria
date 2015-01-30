@@ -38,4 +38,11 @@ angular.module("malariaApp")
                 $scope.performingDistribution = false;
             })
         }
+
+        $scope.confirmVericationKaya = function(id){
+            alert("Coupon with code number "+ id +" has been Verified");
+            $scope.data.kayaId = null;
+            $scope.currentKaya = {};
+            $scope.currentKayaPresent = true;
+        }
     });

@@ -191,7 +191,7 @@
 <table class="table table-striped table-bordered table-condensed" style="border-collapse: collapse;">
         <thead style="background-color: #5B9BD5; border: 0px">
         <tr style="border: 0px">
-            <th style="border: 0px">Na</th>
+            <th style="border: 0px">ID</th>
             <th style="border: 0px">Jina La Mkuu wa kaya</th>
             <th style="border: 0px">Idadi ya Wanakaya</th>
             <th style="border: 0px">Idadi ya Vyandarua</th>
@@ -201,19 +201,28 @@
         </thead>
         <tbody>
         <?php $index=0;
-        $j = 0;
+        $j = 0; $total = 0;
         ?>
         @foreach($kaya as $kay)
-        <?php $j++ ?>
+        <?php $j++;
+        $total += ($kay->male + $kay->female)
+        ?>
         <tr>
-            <td>{{ ++$index }}</td>
+            <td>{{ $kay->uid }}</td>
             <td>{{ $kay->leader_name }}</td>
             <td>{{ $kay->male + $kay->female }}</td>
             <td>{{ ($kay->male + $kay->female)/2 }}</td>
-            <td>__________________</td>
-            <td>__________________</td>
+            <td>____________</td>
+            <td>____________</td>
         </tr>
         @endforeach
-
+        <tr>
+            <td></td>
+            <td>Jumla</td>
+            <td>{{ $total }}</td>
+            <td>{{ $total/2 }}</td>
+            <td></td>
+            <td></td>
+        </tr>
         </tbody>
     </table>

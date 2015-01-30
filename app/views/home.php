@@ -44,6 +44,9 @@
     body{
         font-family: myLightFont ;
     }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 </style>
 </head>
 
@@ -88,21 +91,22 @@
                         <md-button href="#home">Home</md-button>
 <!--                        <a href="#home"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>-->
                     </li>
-                    <li ng-class="{ active: isActive('/registration') }">
-                        <md-button href="#registration">Registration</md-button>
-<!--                        <a  href="#registration">Registration</a>-->
+                    <li class="dropdown" ng-class="{ active: isActive('/registration') || isActive('/import') || isActive('/distribute') || isActive('/verify') }">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Registration <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#/registration"><i class="fa fa-plus"></i> Add Coupons</a></li>
+                            <li><a href="#/import"><i class="fa fa-upload"></i> Import Coupons</a></li>
+                            <li><a href="#/distribute"><i class="fa fa-check"></i> Redeem Coupons</a></li>
+                            <li><a href="#/verify"><i class="fa fa-search"></i> Verify Coupons</a></li>
+                        </ul>
                     </li>
-                    <li ng-class="{ active: isActive('/distribution') }">
-                        <md-button href="#distribution">Summary</md-button>
-<!--                        <a  href="#distribution">Summary</a>-->
-                    </li>
-                    <li ng-class="{ active: isActive('/distribute') }">
-                        <md-button href="#distribute">Distribute</md-button>
-<!--                        <a  href="#distribute">Distribute</a>-->
-                    </li>
-                    <li ng-class="{ active: isActive('/distribution_list') }">
-                        <md-button href="#distribution_list">Distribution List</md-button>
-<!--                        <a  href="#distribute">Distribute</a>-->
+                    <li class="dropdown" ng-class="{ active: isActive('/distribution_list') || isActive('/distribution_list1') || isActive('/distribution') }">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Reports <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#/distribution"><i class="fa fa-book"></i> Summary </a></li>
+                            <li><a href="#/distribution_list1"><i class="fa fa-list"></i> Distribution List </a></li>
+                            <li><a href="#/distribution_list"><i class="fa fa-th"></i> Issuing List </a></li>
+                        </ul>
                     </li>
                     <li ng-class="{ active: isActive('/stations') }">
                         <md-button href="#stations">Administrative Units</md-button>
