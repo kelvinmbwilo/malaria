@@ -202,7 +202,7 @@
     ?>
     <tr>
         <td>{{ ++$k }}</td>
-        <td>{{ $kay['name'] }}</td>
+        <td style="text-align: left">{{ $kay['name'] }}</td>
         <td>{{ $kay['kaya'] }}</td>
         <td>{{ intval(($kay['male'] + $kay['female'])/2) }}</td>
         <td></td>
