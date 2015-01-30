@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a28b07d-a7c3-4385-bd7c-e23681f90765" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/distribution1.blade.php" afterPath="$PROJECT_DIR$/app/views/distribution1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/home.html" afterPath="$PROJECT_DIR$/public/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/stations.html" afterPath="$PROJECT_DIR$/public/views/stations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home.php" afterPath="$PROJECT_DIR$/app/views/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login.blade.php" afterPath="$PROJECT_DIR$/app/views/login.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
     </list>
     <ignored path="malaria.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,17 +36,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="distributionCtrl.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/distributionCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="28" selection-start="6068" selection-end="6077" vertical-scroll-proportion="0.0" vertical-offset="2198" max-vertical-offset="2826">
-              <folding>
-                <marker date="1422587151356" expanded="true" signature="5104:5868" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/routes.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stations.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="stations.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/views/stations.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="662">
+            <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="612">
               <folding />
             </state>
           </provider>
@@ -103,7 +91,16 @@
       <file leaf-file-name="login.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="7" selection-start="0" selection-end="5581" vertical-scroll-proportion="-11.111111" vertical-offset="3192" max-vertical-offset="3600">
+            <state line="171" column="44" selection-start="4648" selection-end="4648" vertical-scroll-proportion="-10.222222" vertical-offset="2802" max-vertical-offset="3600">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="522" selection-end="522" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="2466">
               <folding />
             </state>
           </provider>
@@ -121,10 +118,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="65" selection-start="6635" selection-end="6635" vertical-scroll-proportion="-9.185185" vertical-offset="1732" max-vertical-offset="2610">
+            <state line="125" column="51" selection-start="7581" selection-end="7581" vertical-scroll-proportion="1.0863309" vertical-offset="1948" max-vertical-offset="2610">
               <folding />
             </state>
           </provider>
@@ -168,12 +165,10 @@
         <option value="$PROJECT_DIR$/public/views/registration.html" />
         <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/public/js/controllers/listCtrl.js" />
-        <option value="$PROJECT_DIR$/app/views/login.blade.php" />
         <option value="$PROJECT_DIR$/public/js/controllers/kayaCtrl.js" />
         <option value="$PROJECT_DIR$/public/views/import.html" />
         <option value="$PROJECT_DIR$/public/views/distribution.html" />
         <option value="$PROJECT_DIR$/public/js/controllers/distributionCtrl1.js" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/controllers/kayaController.php" />
         <option value="$PROJECT_DIR$/public/views/distribution_list1.html" />
         <option value="$PROJECT_DIR$/public/views/distribution_list.html" />
@@ -181,7 +176,6 @@
         <option value="$PROJECT_DIR$/public/js/controllers/distributeCtrl.js" />
         <option value="$PROJECT_DIR$/public/views/distribute.html" />
         <option value="$PROJECT_DIR$/public/views/verify.html" />
-        <option value="$PROJECT_DIR$/app/views/home.php" />
         <option value="$PROJECT_DIR$/public/js/controllers/distributionCtrl.js" />
         <option value="$PROJECT_DIR$/public/views/supervisor.html" />
         <option value="$PROJECT_DIR$/public/js/controllers/malariaAppCtrl.js" />
@@ -190,6 +184,9 @@
         <option value="$PROJECT_DIR$/app/views/distribution1.blade.php" />
         <option value="$PROJECT_DIR$/public/views/home.html" />
         <option value="$PROJECT_DIR$/public/views/stations.html" />
+        <option value="$PROJECT_DIR$/app/views/login.blade.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/views/home.php" />
       </list>
     </option>
   </component>
@@ -420,7 +417,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1602" height="874" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16752246" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -430,7 +427,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5564409" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5099602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -715,18 +712,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="0" selection-start="4608" selection-end="4770" vertical-scroll-proportion="-82.0" vertical-offset="0" max-vertical-offset="2376">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controllers/distributionCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="145" column="28" selection-start="6068" selection-end="6077" vertical-scroll-proportion="0.0" vertical-offset="2198" max-vertical-offset="2826">
           <folding>
-            <marker date="1422587151356" expanded="true" signature="5104:5868" placeholder="{...}" />
+            <marker date="1422587151356" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -744,13 +734,6 @@
     <entry file="file://$PROJECT_DIR$/public/js/controllers/malariaAppCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="33" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1656">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="7" selection-start="0" selection-end="5581" vertical-scroll-proportion="-11.111111" vertical-offset="3192" max-vertical-offset="3600">
           <folding />
         </state>
       </provider>
@@ -783,13 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="65" selection-start="6635" selection-end="6635" vertical-scroll-proportion="-9.185185" vertical-offset="1732" max-vertical-offset="2610">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="1420" selection-end="1420" vertical-scroll-proportion="-13.666667" vertical-offset="81" max-vertical-offset="792">
@@ -800,6 +776,27 @@
     <entry file="file://$PROJECT_DIR$/public/views/stations.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="662">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="171" column="44" selection-start="4648" selection-end="4648" vertical-scroll-proportion="-10.222222" vertical-offset="2802" max-vertical-offset="3600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="522" selection-end="522" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="2466">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="51" selection-start="7581" selection-end="7581" vertical-scroll-proportion="1.0863309" vertical-offset="1948" max-vertical-offset="2610">
           <folding />
         </state>
       </provider>

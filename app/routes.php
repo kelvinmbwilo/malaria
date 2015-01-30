@@ -19,6 +19,11 @@ Route::get('login',function(){
     return View::make('login');
 });
 
+
+Route::post('login',function(){
+    return Redirect::to('/');
+});
+
 //getting kaya
 Route::post('getkaya',array('uses'=>'kayaController@index'));
 

@@ -123,7 +123,7 @@
                             <li><a href="#/profile"><i class="fa fa-user"></i> profile</a></li>
                             <li><a href="#/change_password"><i class="fa fa-lock"></i> change password</a></li>
                             <li class="divider"></li>
-                            <li><a href="#/logout"><i class="fa fa-power-off"></i> logout</a></li>
+                            <li><a href="index.php/login"><i class="fa fa-power-off"></i> logout</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -106,7 +106,7 @@
             margin-top: 10px;
         }
 
-        .login input[type=button]{
+        .login #submitbutton{
             width: 250px;
             height: 35px;
             background: #fff;
@@ -121,11 +121,11 @@
             margin-top: 10px;
         }
 
-        .login input[type=button]:hover{
+        .login #submitbutton:hover{
             opacity: 0.8;
         }
 
-        .login input[type=button]:active{
+        .login #submitbutton:active{
             opacity: 0.6;
         }
 
@@ -139,7 +139,7 @@
             border: 1px solid rgba(255,255,255,0.9);
         }
 
-        .login input[type=button]:focus{
+        .login #submitbutton:focus{
             outline: none;
         }
 
@@ -169,10 +169,10 @@
         <div class="col-sm-6" style="margin-top: 10px">
             <div class="login">
                 <h3>LLIN DATABASE Login</h3>
-                <form action="<?php echo url('/') ?>" method="post">
+                <form action="<?php echo url('login') ?>" method="post">
                 <input type="text" placeholder="username" name="user"><br>
                 <input type="password" placeholder="password" name="password"><br>
-                <input type="button" value="Login">
+                <input type="submit" id="submitbutton" value="Login">
                 </form>
             </div>
         </div>
