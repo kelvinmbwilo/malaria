@@ -188,7 +188,7 @@
         <th style="border: 0px">Village</th>
         <th style="border: 0px">Number of Coupons</th>
         <th style="border: 0px">Number of Nets</th>
-        <th style="border: 0px">Excess</th>
+        <th style="border: 0px">Buffer</th>
     </tr>
     </thead>
     <tbody>
