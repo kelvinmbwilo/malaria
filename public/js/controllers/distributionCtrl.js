@@ -119,6 +119,33 @@ angular.module("malariaApp")
 
         }
 
+        $scope.closeList = false;
+        $scope.data.closeWards = {};
+        $scope.getDistrict = function(arra){
+            $scope.closeList = false;
+            $scope.villageVisible = [];
+            $http.get("index.php/people/district/"+arra.district).success(function(ppl){
+                $scope.data.closeWards.name = ppl.name;
+            });
+                $http.get("index.php/wards/district/"+arra.district).success(function(distr){
+                    $scope.closeList = true;
+                    $scope.data.closeWards = distr;
+                    angular.forEach($scope.data.closeWards,function(val){
+                        var ward = val;
+                        $http.get("index.php/people/ward/"+val.id).success(function(ppl){
+                            ward.people = ppl;
+                        });
+                    });
+                });
+        }
+
+        $scope.closeDistrict = function(arra){
+            alert("Net Distribution Process Closed");
+            $scope.data.closeWards = {};
+            $scope.currentKaya = {};
+            $scope.closeList = false;
+        }
+
 
 
 

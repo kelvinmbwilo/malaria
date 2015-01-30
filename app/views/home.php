@@ -108,9 +108,11 @@
                             <li><a href="#/distribution_list"><i class="fa fa-th"></i> Issuing List </a></li>
                         </ul>
                     </li>
+                    <li ng-class="{ active: isActive('/supervisor') }">
+                        <md-button href="#supervisor">Supervisor</md-button>
+                    </li>
                     <li ng-class="{ active: isActive('/stations') }">
                         <md-button href="#stations">Administrative Units</md-button>
-<!--                        <a  href="#stations">Stations</a>-->
                     </li>
 
                 </ul>

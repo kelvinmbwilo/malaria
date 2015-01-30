@@ -3,6 +3,17 @@
  */
 angular.module("malariaApp")
     .controller("malariaAppCtrl",function($scope,$http,$location){
+        $scope.loggedUser = false;
+        $scope.login = function(user){
+            if(user.name == "admin" && user.pass == 'admin'){
+                $scope.loggedUser = true;
+            }
+        }
+
+        $scope.logout = function(){
+            $scope.activenow = false;
+        }
+
         $scope.data ={};
         //getting all kayas
         /**
